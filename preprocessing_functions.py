@@ -33,3 +33,9 @@ def date_parser(input_date):
     year = input_date[third_space + 1:]
     
     return day, month, year
+
+
+def merge_dicts(dict1, dict2): 
+    #merges two dictionaries
+    res = {**dict1, **dict2} 
+    return res 
