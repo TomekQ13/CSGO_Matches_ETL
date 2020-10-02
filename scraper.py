@@ -1,48 +1,11 @@
 
 
-
-#custom objects import
-
-#my_url = 'https://www.hltv.org/results'
-
-#def soup_url(url, timeout=10, user_agent='XYZ/3.0', parser = "html.parser")\
-
-
-
-def open_url(url, user_agent = 'XYZ/3.0', parser = "html.parser"):
-    #function open the url and returns the soup
-    
-    import urllib
-    import bs4
-    
-    #check if input is string
-    if not isinstance(url, str):
-        raise BaseException("Inpt URL has to be type strin")
-        return
-    
-    req = urllib.request.Request(url, headers={'User-Agent': user_agent})
-    page = urllib.request.urlopen(req, timeout=10).read()
-    page_soup = bs4.BeautifulSoup(page, parser)
-    return page_soup
-
-#page_soup = open_url(my_url)
-
-#get the list of matches
-#container = page_soup.findAll("div", {"class":"result-con"})
-
-#open the first match
-#details_url = 'https://www.hltv.org' + container[0].a['href']
-
-
-
 def scrape_match_details(details_url):
     
-    import pandas as pd
-    
-    #custom objects import
+    import pandas as pd    
     import preprocessing_functions as pf
         
-    details_page_soup = open_url(details_url)
+    details_page_soup = pf.open_url(details_url)
     
     #getting match time
     timeAndEvent = details_page_soup.findAll("div", {"class":"timeAndEvent"})
@@ -53,7 +16,7 @@ def scrape_match_details(details_url):
     #get the date
     date = timeAndEvent[0].find("div", {"class":"date"}).text
     day, month, year = pf.date_parser(date)
-    
+      
     
     #get the torunament
     tournament = timeAndEvent[0].find("div", {"class":"event text-ellipsis"}).text
@@ -211,9 +174,9 @@ def scrape_match_details(details_url):
     
     h2h_table = pd.read_html(str(details_page_soup.find("div", {"class": "standard-box head-to-head-listing"}).table))[0]
     
-    h2h_table.columns = ["date", "team_left", "delete", "team_right", "delete", "tournament", "map", "score"]
+    h2h_table.columns = ["match_date", "team_left", "delete", "team_right", "delete", "tournament", "map", "score"]
     
-    h2h_table = h2h_table[["date", "team_left", "team_right", "tournament", "map", "score"]].copy()
+    h2h_table = h2h_table[["match_date", "team_left", "team_right", "tournament", "map", "score"]].copy()
     
     h2h_table["team_left"] = team_left_name
     h2h_table["team_right"] = team_right_name
@@ -246,19 +209,22 @@ def scrape_match_details(details_url):
     
     final_dict = pf.merge_dicts(final_dict, lineups_dict)
     
+    
+    #final dict - dictionary with all the information from the match
+    #results_pdf = pandas dataframe with the results of the particular maps
+    #teams_past_matches = pandas dataframe with 5 past matches for each team
+    #h2h_table = pandas dataframe with head to head matchups of the teams
+    
     return final_dict, results_pdf, teams_past_matches, h2h_table
 
 
-
+#TO DO modify h2h_table so the date is parsed in IFa better format
 
 
     
 #final_dict, results_pdf, teams_past_matches, h2h_table = scrape_match_details(details_url)
 
-            
-            
-    
-        
+
     
         
     

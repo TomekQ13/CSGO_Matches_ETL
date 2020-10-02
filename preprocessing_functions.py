@@ -39,3 +39,20 @@ def merge_dicts(dict1, dict2):
     #merges two dictionaries
     res = {**dict1, **dict2} 
     return res 
+
+
+def open_url(url, user_agent = 'XYZ/3.0', parser = "html.parser"):
+    #function open the url and returns the soup
+    
+    import urllib
+    import bs4
+    
+    #check if input is string
+    if not isinstance(url, str):
+        raise BaseException("Inpt URL has to be type strin")
+        return
+    
+    req = urllib.request.Request(url, headers={'User-Agent': user_agent})
+    page = urllib.request.urlopen(req, timeout=10).read()
+    page_soup = bs4.BeautifulSoup(page, parser)
+    return page_soup
