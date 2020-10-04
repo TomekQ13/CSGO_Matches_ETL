@@ -32,8 +32,10 @@ def scrape_match_details(details_url):
     #empty string counts as false, select the number of points for team left
     if teams[0].find("div", {"class":"lost"}):
         team_left_points = teams[0].find("div", {"class":"lost"}).text
-    else:        
+    elif teams[0].find("div", {"class":"won"}):        
         team_left_points = teams[0].find("div", {"class":"won"}).text
+    else:
+        team_left_points = teams[0].find("div", {"class":"tie"}).text
         
     #get information about the right team
     team_right_name =  teams[1].div.div.text
@@ -42,15 +44,20 @@ def scrape_match_details(details_url):
     #empty string counts as false, select the number of points for team left
     if teams[1].find("div", {"class":"lost"}):
         team_right_points = teams[1].find("div", {"class":"lost"}).text
-    else:        
+    elif teams[1].find("div", {"class":"won"}):        
         team_right_points = teams[1].find("div", {"class":"won"}).text
+    else:
+        team_right_points = teams[1].find("div", {"class":"tie"}).text
         
     #scrape maps and scores
     #first get into the Maps tab
     g_grid_maps = details_page_soup.find("div", {"class":"col-6 col-7-small"})
     
-    #type of match
-    match_type = g_grid_maps.find("div", {"class": "padding preformatted-text"}).text
+    #type of match - sometimes the information is missing and usually it is bo1
+    try:
+        match_type = g_grid_maps.find("div", {"class": "padding preformatted-text"}).text
+    except:
+        match_type = 'Probably best of one'
     
     #maps
     flexbox_column = g_grid_maps.findAll("div", {"class": "mapholder"})
@@ -64,26 +71,25 @@ def scrape_match_details(details_url):
         #get the map name
         results_dict["map_name"] = cs_map[1].find("div", {"class": "mapname"}).text
         
-        #get the team scores on the map
-        results_dict["team_left_score"] = cs_map[1].findAll("div", {"class": "results-team-score"})[0].text
-        results_dict["team_right_score"] = cs_map[1].findAll("div", {"class": "results-team-score"})[1].text
+        #get the team scores on the map,
+        #try except if the match was planned to be more maps than was but for some reason was canceled
         
+        try:
+            results_dict["team_left_score"] = cs_map[1].findAll("div", {"class": "results-team-score"})[0].text
+        except:
+            results_dict["team_left_score"] = 'TBA'
+            
+        try:
+            results_dict["team_right_score"] = cs_map[1].findAll("div", {"class": "results-team-score"})[1].text
+        except:
+            results_dict["team_right_score"] = 'TBA'            
+            
         results_dict["map_number"] = map_number
         results_dict["match_url"] = details_url
         
         results_pdf = results_pdf.append(results_dict, ignore_index = True)
         
-    #old way to scrape results of the maps
-    #for cs_map in enumerate(flexbox_column):
-    #    
-    #    map_number = map_number + 1
-    #    #get the map name
-    #    results_dict["map_name_" + str(cs_map[0])] = cs_map[1].find("div", {"class": "mapname"}).text
-    #    
-    #    #get the team scores on the map
-    #    results_dict["team_left_score_map_" + str(cs_map[0])] = cs_map[1].findAll("div", {"class": "results-team-score"})[0].text
-    #    results_dict["team_right_score_map_" + str(cs_map[0])] = cs_map[1].findAll("div", {"class": "results-team-score"})[1].text
-        
+       
     #scrape lineups
     lineups = details_page_soup.find("div", {"class": "lineups"})
     
@@ -116,11 +122,21 @@ def scrape_match_details(details_url):
     
     #new way to read past matches
     left_team_past_matches = pd.read_html(str(tables_past_matches))[0]
+    
+    #if there are no past matches
+    if len(left_team_past_matches.columns) ==1:
+        left_team_past_matches = pd.DataFrame(columns = ["type", "opponent", "result"])
+    
     left_team_past_matches.columns = ["type", "opponent", "result"]
     left_team_past_matches["match_url"] = details_url
     left_team_past_matches["team"] = team_left_name
     
     right_team_past_matches = pd.read_html(str(tables_past_matches))[1]
+    
+    #if there are no past matches
+    if len(right_team_past_matches.columns) ==1:
+        right_team_past_matches = pd.DataFrame(columns = ["type", "opponent", "result"])
+        
     right_team_past_matches.columns = ["type", "opponent", "result"]
     right_team_past_matches["match_url"] = details_url
     right_team_past_matches["team"] = team_right_name
@@ -128,40 +144,7 @@ def scrape_match_details(details_url):
     teams_past_matches =  left_team_past_matches.append(right_team_past_matches)
     #team_left_past_matches = tables_past_matches[0].findAll("tr", {"class": "table"})
     
-    #past_matches_dict = {}
-    ##past matches for the left team
-    #for team_left_past_match in enumerate(team_left_past_matches):
-    #    past_matches_dict["left_team_match_"+str(team_left_past_match[0])+"_type"] = team_left_past_match[1].td.text
-    #    
-    #    #check if was win or lose
-    #    if team_left_past_match[1].find("td", {"class": "spoiler result lost"}):
-    #        past_matches_dict["left_team_match_"+str(team_left_past_match[0])+"_win_lose"] = "lose"
-    #        past_matches_dict["left_team_match_"+str(team_left_past_match[0])+"_result"] = team_left_past_match[1].find("td", {"class": "spoiler result lost"}).text
-    #    else:
-    #        past_matches_dict["left_team_match_"+str(team_left_past_match[0])+"_win_lose"] = "win"
-    #        past_matches_dict["left_team_match_"+str(team_left_past_match[0])+"_result"] = team_left_past_match[1].find("td", {"class": "spoiler result won"}).text
-    #
-    #    #opponent
-    #    past_matches_dict["left_team_match_"+str(team_left_past_match[0])+"_opponent"] = team_left_past_match[1].find("div", {"class": "flagAlign"}).text
-    #
-    #
-    #team_right_past_matches = tables_past_matches[1].findAll("tr", {"class": "table"})
-    ##the same for the right team
-    #for team_right_past_match in enumerate(team_right_past_matches):
-    #    past_matches_dict["right_team_match_"+str(team_right_past_match[0])+"_type"] = team_right_past_match[1].td.text
-    #    
-    #    #check if was win or lose
-    #    if team_right_past_match[1].find("td", {"class": "spoiler result lost"}):
-    #        past_matches_dict["right_team_match_"+str(team_right_past_match[0])+"_win_lose"] = "lose"
-    #        past_matches_dict["right_team_match_"+str(team_right_past_match[0])+"_result"] = team_right_past_match[1].find("td", {"class": "spoiler result lost"}).text
-    #    else:
-    #        past_matches_dict["right_team_match_"+str(team_right_past_match[0])+"_win_lose"] = "win"
-    #        past_matches_dict["right_team_match_"+str(team_right_past_match[0])+"_result"] = team_right_past_match[1].find("td", {"class": "spoiler result won"}).text
-    #
-    #    #opponent
-    #    past_matches_dict["right_team_match_"+str(team_right_past_match[0])+"_opponent"] = team_right_past_match[1].find("div", {"class": "flagAlign"}).text
-    
-    
+   
     #head to head results
     head_to_head = details_page_soup.find("div", {"class": "head-to-head"})
     
@@ -171,8 +154,11 @@ def scrape_match_details(details_url):
     
     #the head to head results
     
-    
-    h2h_table = pd.read_html(str(details_page_soup.find("div", {"class": "standard-box head-to-head-listing"}).table))[0]
+    try:
+        h2h_table = pd.read_html(str(details_page_soup.find("div", {"class": "standard-box head-to-head-listing"}).table))[0]
+    except:
+        h2h_table = pd.DataFrame(columns = ["match_date", "team_left", "delete", "team_right", "delete", "tournament", "map", "score"])
+        print('Head to head not found for match ' + str(details_url))
     
     h2h_table.columns = ["match_date", "team_left", "delete", "team_right", "delete", "tournament", "map", "score"]
     
@@ -209,20 +195,12 @@ def scrape_match_details(details_url):
     
     final_dict = pf.merge_dicts(final_dict, lineups_dict)
     
-    
-    #final dict - dictionary with all the information from the match
-    #results_pdf = pandas dataframe with the results of the particular maps
-    #teams_past_matches = pandas dataframe with 5 past matches for each team
-    #h2h_table = pandas dataframe with head to head matchups of the teams
-    
+
     return final_dict, results_pdf, teams_past_matches, h2h_table
 
 
 #TO DO modify h2h_table so the date is parsed in IFa better format
 
-
-    
-#final_dict, results_pdf, teams_past_matches, h2h_table = scrape_match_details(details_url)
 
 
     

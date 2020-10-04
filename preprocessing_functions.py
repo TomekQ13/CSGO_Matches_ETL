@@ -56,3 +56,18 @@ def open_url(url, user_agent = 'XYZ/3.0', parser = "html.parser"):
     page = urllib.request.urlopen(req, timeout=10).read()
     page_soup = bs4.BeautifulSoup(page, parser)
     return page_soup
+
+def query_to_list(engine, query):
+    #transfers query results to a list
+    try:
+        results = engine.execute(query)
+    except:
+        raise BaseException("Query could not be executed or was executed with errors")
+        
+    results_list = []
+    for row in results:
+        results_list.append[row]
+        
+    return results_list
+    
+    
