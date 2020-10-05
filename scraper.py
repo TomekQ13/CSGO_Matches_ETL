@@ -108,10 +108,27 @@ def scrape_match_details(details_url):
      
             #assign to the correct team - left or right team
             if cs_table[0] == 0:
-                lineups_dict["team_left_player_"+str(player[0])] = player_name
+                try:
+                    lineups_dict["team_left_player_"+str(player[0])] = player_name
+                except:
+                    lineups_dict["team_left_player_"+str(player[0])] = 'PLAYER_NOT_FOUND'
+                    print("team_left_player_"+str(player[0]) + 'have not been found')
             else:
-                lineups_dict["team_right_player_"+str(player[0])] = player_name
-    
+                try:
+                    lineups_dict["team_right_player_"+str(player[0])] = player_name
+                except:
+                    lineups_dict["team_right_player_"+str(player[0])] = 'PLAYER_NOT_FOUND'
+                    print("team_right_player_"+str(player[0]) + 'have not been found')
+                    
+        #if there are 4 players add TBA as fifth player to avoid length mismatch
+        if len(players) == 4:
+            if cs_table[0] == 0:
+                lineups_dict['team_left_player_5'] = 'TBA'
+                print('Fiftth player for team left not found')
+            else:
+                lineups_dict['team_right_player_5'] = 'TBA'
+                print('Fifth player for team rigt not found')
+        
     #world rank    
     team_left_ranking = lineups.findAll("div", {"class": "teamRanking"})[0].text
     team_right_ranking = lineups.findAll("div", {"class": "teamRanking"})[1].text

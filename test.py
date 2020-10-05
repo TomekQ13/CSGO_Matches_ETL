@@ -29,3 +29,6 @@ for i in range(10):
     if i == 5:
         continue
     print(i)
+    
+    
+final_dict, results_pdf, teams_past_matches, h2h_table = scraper.scrape_match_details('https://www.hltv.org/matches/2339713/mc-vs-rock-candy-esea-mdl-season-33-australia')
