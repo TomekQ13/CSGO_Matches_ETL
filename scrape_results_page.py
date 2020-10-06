@@ -28,11 +28,12 @@ def scrape_results_page(my_url,
         details_url = 'https://www.hltv.org' + match[1].a['href']
         
         #loading only 
-        #if match_url is already in the table
+        #if match_url is already in the table display a message to the log and skip the load
         if (details_url in matches_list):
             print('Match ' + str(details_url) + ' has already been inserted into the table')
             duplicates = duplicates + 1
             print('duplicates: ' + str(duplicates))
+            continue
             
         if duplicates >= number_duplicates:
             raise BaseException('The maximum number of duplicates reached. The scraping will stop now.')

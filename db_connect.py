@@ -1,10 +1,4 @@
-# -*- coding: utf-8 -*-
-"""
-Created on Wed Sep 30 18:56:24 2020
-
-@author: kucza
-"""
-
+#currently this module is redundant
 import cx_Oracle
 import config
 
