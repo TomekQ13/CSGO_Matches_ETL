@@ -1,0 +1,110 @@
+<?xml version = '1.0' encoding = 'UTF-8'?>
+<Table class="oracle.dbtools.crest.model.design.relational.Table" directorySegmentName="seg_0" id="4C47E57B-D733-7A51-9F6E-EBB191EBD626" name="IF_HEAD_TO_HEAD">
+<sourceDDLFile>Schema_DDL.sql</sourceDDLFile>
+<createdBy>kucza</createdBy>
+<createdTime>2020-10-10 08:25:56 UTC</createdTime>
+<ownerDesignName>SCSDM</ownerDesignName>
+<importedID>69BBC069-8008-CDFB-7EF2-903E6D2FF0D5</importedID>
+<allowColumnReorder>false</allowColumnReorder>
+<existDependencyGenerateInDDl>true</existDependencyGenerateInDDl>
+<parsed>true</parsed>
+<columns itemClass="oracle.dbtools.crest.model.design.relational.Column">
+<Column name="MATCH_URL" id="98F6FE0D-906D-D35B-D947-BBF557BEA043">
+<sourceDDLFile>Schema_DDL.sql</sourceDDLFile>
+<createdBy>kucza</createdBy>
+<createdTime>2020-10-10 08:25:56 UTC</createdTime>
+<ownerDesignName>SCSDM</ownerDesignName>
+<importedID>AAEEF73B-8857-6258-581B-867FE83301B6</importedID>
+<use>0</use>
+<logicalDatatype>LOGDT024</logicalDatatype>
+<domain>43AEB319-FE66-1CE3-2328-C18BCAE02398</domain>
+<ownDataTypeParameters>,,</ownDataTypeParameters>
+<autoIncrementCycle>false</autoIncrementCycle>
+</Column>
+<Column name="TEAM_LEFT" id="8944F199-11FC-69D8-D83F-0EACDF8D7A5F">
+<sourceDDLFile>Schema_DDL.sql</sourceDDLFile>
+<createdBy>kucza</createdBy>
+<createdTime>2020-10-10 08:25:56 UTC</createdTime>
+<ownerDesignName>SCSDM</ownerDesignName>
+<importedID>58E5176D-3A9E-E5EF-972B-62FC7C46F7A4</importedID>
+<use>0</use>
+<logicalDatatype>LOGDT024</logicalDatatype>
+<domain>E74D611B-FCBD-3FAC-6A64-7614BEA84E07</domain>
+<ownDataTypeParameters>,,</ownDataTypeParameters>
+<autoIncrementCycle>false</autoIncrementCycle>
+</Column>
+<Column name="TEAM_RIGHT" id="0D97C99A-2446-3810-69C2-89527DA348EB">
+<sourceDDLFile>Schema_DDL.sql</sourceDDLFile>
+<createdBy>kucza</createdBy>
+<createdTime>2020-10-10 08:25:56 UTC</createdTime>
+<ownerDesignName>SCSDM</ownerDesignName>
+<importedID>977825D0-1AA5-3182-8B9D-4F1F7CAFD5CF</importedID>
+<use>0</use>
+<logicalDatatype>LOGDT024</logicalDatatype>
+<domain>E74D611B-FCBD-3FAC-6A64-7614BEA84E07</domain>
+<ownDataTypeParameters>,,</ownDataTypeParameters>
+<autoIncrementCycle>false</autoIncrementCycle>
+</Column>
+<Column name="MATCH_DATE" id="22DC2E00-9ED8-062E-9CC8-3BE728FDB81C">
+<sourceDDLFile>Schema_DDL.sql</sourceDDLFile>
+<createdBy>kucza</createdBy>
+<createdTime>2020-10-10 08:25:56 UTC</createdTime>
+<ownerDesignName>SCSDM</ownerDesignName>
+<importedID>4F1239D0-0BE0-7E24-180C-616A22AED0A3</importedID>
+<use>0</use>
+<logicalDatatype>LOGDT024</logicalDatatype>
+<domain>E74D611B-FCBD-3FAC-6A64-7614BEA84E07</domain>
+<ownDataTypeParameters>,,</ownDataTypeParameters>
+<autoIncrementCycle>false</autoIncrementCycle>
+</Column>
+<Column name="TOURNAMENT" id="9807DFCE-B70E-40ED-4503-51E77FC774EE">
+<sourceDDLFile>Schema_DDL.sql</sourceDDLFile>
+<createdBy>kucza</createdBy>
+<createdTime>2020-10-10 08:25:56 UTC</createdTime>
+<ownerDesignName>SCSDM</ownerDesignName>
+<importedID>03F0A846-5B05-8BF0-93A6-DC898B7AB272</importedID>
+<use>0</use>
+<logicalDatatype>LOGDT024</logicalDatatype>
+<domain>E74D611B-FCBD-3FAC-6A64-7614BEA84E07</domain>
+<ownDataTypeParameters>,,</ownDataTypeParameters>
+<autoIncrementCycle>false</autoIncrementCycle>
+</Column>
+<Column name="MAP" id="E122A726-CFA2-6806-8F5F-F938E34FF322">
+<sourceDDLFile>Schema_DDL.sql</sourceDDLFile>
+<createdBy>kucza</createdBy>
+<createdTime>2020-10-10 08:25:56 UTC</createdTime>
+<ownerDesignName>SCSDM</ownerDesignName>
+<importedID>F3FDBF8A-DE29-419B-1744-0148DB156D44</importedID>
+<use>0</use>
+<logicalDatatype>LOGDT024</logicalDatatype>
+<domain>E74D611B-FCBD-3FAC-6A64-7614BEA84E07</domain>
+<ownDataTypeParameters>,,</ownDataTypeParameters>
+<autoIncrementCycle>false</autoIncrementCycle>
+</Column>
+<Column name="SCORE" id="B4268562-FADE-201E-41F9-607C101296A4">
+<sourceDDLFile>Schema_DDL.sql</sourceDDLFile>
+<createdBy>kucza</createdBy>
+<createdTime>2020-10-10 08:25:56 UTC</createdTime>
+<ownerDesignName>SCSDM</ownerDesignName>
+<importedID>652FE28D-8A49-6B01-E80B-57B4D1D8B158</importedID>
+<use>0</use>
+<logicalDatatype>LOGDT024</logicalDatatype>
+<domain>E74D611B-FCBD-3FAC-6A64-7614BEA84E07</domain>
+<ownDataTypeParameters>,,</ownDataTypeParameters>
+<autoIncrementCycle>false</autoIncrementCycle>
+</Column>
+<Column name="T_INSERT_DTTM" id="C52C21EA-2D70-8C72-CA9F-D06F91A163DA">
+<sourceDDLFile>Schema_DDL.sql</sourceDDLFile>
+<createdBy>kucza</createdBy>
+<createdTime>2020-10-10 08:25:56 UTC</createdTime>
+<ownerDesignName>SCSDM</ownerDesignName>
+<importedID>44E41FB6-5294-4138-9F6F-4619B8EBCC01</importedID>
+<use>0</use>
+<logicalDatatype>LOGDT047</logicalDatatype>
+<domain>01DA9667-3085-D54D-B040-B25BF2049A8B</domain>
+<defaultValue>current_timestamp</defaultValue>
+<ownDataTypeParameters>,,</ownDataTypeParameters>
+<autoIncrementCycle>false</autoIncrementCycle>
+</Column>
+</columns>
+</Table>

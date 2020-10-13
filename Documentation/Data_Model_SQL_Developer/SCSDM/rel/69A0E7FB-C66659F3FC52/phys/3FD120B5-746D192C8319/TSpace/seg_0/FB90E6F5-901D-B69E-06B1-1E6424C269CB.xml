@@ -1,0 +1,9 @@
+<?xml version = '1.0' encoding = 'UTF-8'?>
+<TableSpaceOraclev10g class="oracle.dbtools.crest.model.design.storage.oracle.v10g.TableSpaceOraclev10g" name="USERS" directorySegmentName="seg_0" id="FB90E6F5-901D-B69E-06B1-1E6424C269CB">
+<sourceDDLFile>Schema_DDL.sql</sourceDDLFile>
+<createdBy>kucza</createdBy>
+<createdTime>2020-10-10 08:25:37 UTC</createdTime>
+<ownerDesignName>SCSDM</ownerDesignName>
+<emUniformSize>0</emUniformSize>
+<extentManagement>LOCAL</extentManagement>
+</TableSpaceOraclev10g>

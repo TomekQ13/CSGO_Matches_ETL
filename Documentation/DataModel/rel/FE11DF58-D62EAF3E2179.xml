@@ -1,8 +1,0 @@
-<?xml version = '1.0' encoding = 'UTF-8'?>
-<relationalModel class="oracle.dbtools.crest.model.design.relational.RelationalDesign" name="SCSDM" id="FE11DF58-4E07-F5E0-365F-D62EAF3E2179" mainViewID="4E73C7B5-E02A-3506-0473-3CF002564823">
-<createdBy>kucza</createdBy>
-<createdTime>2020-10-06 20:45:11 UTC</createdTime>
-<ownerDesignName>DataModel</ownerDesignName>
-<shouldBeOpen>false</shouldBeOpen>
-<selectedRDBMSSite>3FD120B5-9F4E-6278-D5E2-746D192C8319</selectedRDBMSSite>
-</relationalModel>

@@ -1,0 +1,15 @@
+<?xml version = '1.0' encoding = 'UTF-8'?>
+<relationalModel class="oracle.dbtools.crest.model.design.relational.RelationalDesign" name="Interface" id="69A0E7FB-AF2A-E28B-A83E-C66659F3FC52" mainViewID="C0FFB0A5-2979-DD41-0297-656EAB9A7B6B">
+<createdBy>kucza</createdBy>
+<createdTime>2020-10-10 08:25:37 UTC</createdTime>
+<ownerDesignName>SCSDM</ownerDesignName>
+<shouldBeOpen>false</shouldBeOpen>
+<selectedRDBMSSite>3FD120B5-9F4E-6278-D5E2-746D192C8319</selectedRDBMSSite>
+<importDDLFileStamps>
+<importDDLFileStamp class="oracle.dbtools.crest.imports.DDLFileStamp">
+<fileName>Schema_DDL.sql</fileName>
+<pathName>C:\Users\kucza\OneDrive\Desktop\DataScience\CSGO</pathName>
+<dbType>11</dbType>
+</importDDLFileStamp>
+</importDDLFileStamps>
+</relationalModel>

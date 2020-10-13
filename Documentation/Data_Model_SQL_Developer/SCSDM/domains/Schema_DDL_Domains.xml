@@ -1,0 +1,58 @@
+<?xml version = '1.0' encoding = 'UTF-8'?>
+<DomainFile class="oracle.dbtools.crest.model.design.DomainFileWrapper" fileName="Schema_DDL_Domains">
+<domains>
+<Domain class="oracle.dbtools.crest.model.design.Domain" name="TIMESTAMP WITH LOCAL TIME ZONE_6_0_0" id="01DA9667-3085-D54D-B040-B25BF2049A8B">
+<createdBy>kucza</createdBy>
+<createdTime>2020-10-10 08:25:56 UTC</createdTime>
+<ownerDesignName>SCSDM</ownerDesignName>
+<avTSortOrder>0</avTSortOrder>
+<dataTypePrecision>6</dataTypePrecision>
+<fileName>Schema_DDL_Domains</fileName>
+<logicalDatatype>LOGDT047</logicalDatatype>
+</Domain>
+<Domain class="oracle.dbtools.crest.model.design.Domain" name="VARCHAR_0_0_1024 CHAR" id="43AEB319-FE66-1CE3-2328-C18BCAE02398">
+<createdBy>kucza</createdBy>
+<createdTime>2020-10-10 08:25:56 UTC</createdTime>
+<ownerDesignName>SCSDM</ownerDesignName>
+<avTSortOrder>0</avTSortOrder>
+<dataTypePrecision>0</dataTypePrecision>
+<dataTypeScale>0</dataTypeScale>
+<dataTypeSize>1024 CHAR</dataTypeSize>
+<fileName>Schema_DDL_Domains</fileName>
+<logicalDatatype>LOGDT024</logicalDatatype>
+</Domain>
+<Domain class="oracle.dbtools.crest.model.design.Domain" name="VARCHAR_0_0_1024 BYTE" id="B0B49EB6-247E-23B1-A029-6825AA01149A">
+<createdBy>kucza</createdBy>
+<createdTime>2020-10-10 08:25:56 UTC</createdTime>
+<ownerDesignName>SCSDM</ownerDesignName>
+<avTSortOrder>0</avTSortOrder>
+<dataTypePrecision>0</dataTypePrecision>
+<dataTypeScale>0</dataTypeScale>
+<dataTypeSize>1024 BYTE</dataTypeSize>
+<fileName>Schema_DDL_Domains</fileName>
+<logicalDatatype>LOGDT024</logicalDatatype>
+</Domain>
+<Domain class="oracle.dbtools.crest.model.design.Domain" name="VARCHAR_0_0_255 BYTE" id="D8C03328-9B3F-5F06-AA72-BBA512B4C609">
+<createdBy>kucza</createdBy>
+<createdTime>2020-10-10 08:25:56 UTC</createdTime>
+<ownerDesignName>SCSDM</ownerDesignName>
+<avTSortOrder>0</avTSortOrder>
+<dataTypePrecision>0</dataTypePrecision>
+<dataTypeScale>0</dataTypeScale>
+<dataTypeSize>255 BYTE</dataTypeSize>
+<fileName>Schema_DDL_Domains</fileName>
+<logicalDatatype>LOGDT024</logicalDatatype>
+</Domain>
+<Domain class="oracle.dbtools.crest.model.design.Domain" name="VARCHAR_0_0_255 CHAR" id="E74D611B-FCBD-3FAC-6A64-7614BEA84E07">
+<createdBy>kucza</createdBy>
+<createdTime>2020-10-10 08:25:56 UTC</createdTime>
+<ownerDesignName>SCSDM</ownerDesignName>
+<avTSortOrder>0</avTSortOrder>
+<dataTypePrecision>0</dataTypePrecision>
+<dataTypeScale>0</dataTypeScale>
+<dataTypeSize>255 CHAR</dataTypeSize>
+<fileName>Schema_DDL_Domains</fileName>
+<logicalDatatype>LOGDT024</logicalDatatype>
+</Domain>
+</domains>
+</DomainFile>

@@ -1,0 +1,221 @@
+<?xml version = '1.0' encoding = 'UTF-8'?>
+<Table class="oracle.dbtools.crest.model.design.relational.Table" directorySegmentName="seg_0" id="540D0631-C13D-7D7B-F46E-9F9AB74BA67C" name="SCSDM_LINEUP">
+<createdBy>kucza</createdBy>
+<createdTime>2020-10-10 08:30:35 UTC</createdTime>
+<commentInRDBMS><![CDATA[The table containes information about lineups for each team for the match.]]></commentInRDBMS>
+<ownerDesignName>SCSDM</ownerDesignName>
+<ordsAlias>table_1</ordsAlias>
+<allowColumnReorder>false</allowColumnReorder>
+<existDependencyGenerateInDDl>true</existDependencyGenerateInDDl>
+<parsed>true</parsed>
+<columns itemClass="oracle.dbtools.crest.model.design.relational.Column">
+<Column name="LINEUP_RK" id="4CD286CB-2DA0-A0E9-1B78-2DF2773A8092">
+<createdBy>kucza</createdBy>
+<createdTime>2020-10-10 08:41:53 UTC</createdTime>
+<commentInRDBMS><![CDATA[The retained key for the lineup. Generated always as identity in the transformation layer.]]></commentInRDBMS>
+<ownerDesignName>SCSDM</ownerDesignName>
+<shouldEngineer>false</shouldEngineer>
+<useDomainConstraints>false</useDomainConstraints>
+<use>1</use>
+<logicalDatatype>LOGDT011</logicalDatatype>
+<ownDataTypeParameters>,,</ownDataTypeParameters>
+<autoIncrementColumn>true</autoIncrementColumn>
+<identityColumn>true</identityColumn>
+<autoIncrementGenerateAlways>true</autoIncrementGenerateAlways>
+<autoIncrementCycle>false</autoIncrementCycle>
+</Column>
+<Column name="INSERT_DTTM" id="9033D305-EC7D-8B4F-1913-16101B19B55B">
+<createdBy>kucza</createdBy>
+<createdTime>2020-10-10 08:41:53 UTC</createdTime>
+<commentInRDBMS><![CDATA[Insert timestamp of the row.]]></commentInRDBMS>
+<ownerDesignName>SCSDM</ownerDesignName>
+<shouldEngineer>false</shouldEngineer>
+<useDomainConstraints>false</useDomainConstraints>
+<use>1</use>
+<logicalDatatype>LOGDT047</logicalDatatype>
+<defaultValue>current_timestamp</defaultValue>
+<ownDataTypeParameters>,,</ownDataTypeParameters>
+<autoIncrementCycle>false</autoIncrementCycle>
+</Column>
+<Column name="MATCH_RK" id="05586F65-C855-F496-C825-8112C7FB5C3C">
+<createdBy>kucza</createdBy>
+<createdTime>2020-10-10 08:41:53 UTC</createdTime>
+<commentInRDBMS><![CDATA[Retained key for a match the lineup belogs to.]]></commentInRDBMS>
+<ownerDesignName>SCSDM</ownerDesignName>
+<useDomainConstraints>false</useDomainConstraints>
+<use>1</use>
+<logicalDatatype>LOGDT011</logicalDatatype>
+<ownDataTypeParameters>,,</ownDataTypeParameters>
+<autoIncrementCycle>false</autoIncrementCycle>
+</Column>
+<Column name="LT_PLAYER_ONE" id="80D0E682-7079-F0FD-0652-CD1FDFA72302">
+<createdBy>kucza</createdBy>
+<createdTime>2020-10-10 08:41:53 UTC</createdTime>
+<commentInRDBMS><![CDATA[Left team player one.]]></commentInRDBMS>
+<ownerDesignName>SCSDM</ownerDesignName>
+<nullsAllowed>true</nullsAllowed>
+<useDomainConstraints>false</useDomainConstraints>
+<use>1</use>
+<logicalDatatype>LOGDT024</logicalDatatype>
+<dataTypeSize>255 CHAR</dataTypeSize>
+<ownDataTypeParameters>255 CHAR,,</ownDataTypeParameters>
+<autoIncrementCycle>false</autoIncrementCycle>
+</Column>
+<Column name="LT_PLAYER_TWO" id="8123A4C3-09E2-40AC-159F-0A9FF7E92375">
+<createdBy>kucza</createdBy>
+<createdTime>2020-10-10 08:44:17 UTC</createdTime>
+<commentInRDBMS><![CDATA[Left team player two.]]></commentInRDBMS>
+<ownerDesignName>SCSDM</ownerDesignName>
+<nullsAllowed>true</nullsAllowed>
+<useDomainConstraints>false</useDomainConstraints>
+<use>1</use>
+<logicalDatatype>LOGDT024</logicalDatatype>
+<dataTypeSize>255 CHAR</dataTypeSize>
+<ownDataTypeParameters>255 CHAR,,</ownDataTypeParameters>
+<autoIncrementCycle>false</autoIncrementCycle>
+</Column>
+<Column name="LT_PLAYER_THREE" id="6EB29AA3-FABD-2114-A1FD-48ABFB268BE5">
+<createdBy>kucza</createdBy>
+<createdTime>2020-10-10 08:44:17 UTC</createdTime>
+<commentInRDBMS><![CDATA[Left team player three.
+
+]]></commentInRDBMS>
+<ownerDesignName>SCSDM</ownerDesignName>
+<nullsAllowed>true</nullsAllowed>
+<useDomainConstraints>false</useDomainConstraints>
+<use>1</use>
+<logicalDatatype>LOGDT024</logicalDatatype>
+<dataTypeSize>255 CHAR</dataTypeSize>
+<ownDataTypeParameters>255 CHAR,,</ownDataTypeParameters>
+<autoIncrementCycle>false</autoIncrementCycle>
+</Column>
+<Column name="LT_PLAYER_FOUR" id="7E4A1FCF-B19F-5844-0892-6EFC52C23554">
+<createdBy>kucza</createdBy>
+<createdTime>2020-10-10 08:44:17 UTC</createdTime>
+<commentInRDBMS><![CDATA[Left team player four.]]></commentInRDBMS>
+<ownerDesignName>SCSDM</ownerDesignName>
+<nullsAllowed>true</nullsAllowed>
+<useDomainConstraints>false</useDomainConstraints>
+<use>1</use>
+<logicalDatatype>LOGDT024</logicalDatatype>
+<dataTypeSize>255 CHAR</dataTypeSize>
+<ownDataTypeParameters>255 CHAR,,</ownDataTypeParameters>
+<autoIncrementCycle>false</autoIncrementCycle>
+</Column>
+<Column name="LT_PLAYER_FIVE" id="DDBF151F-7353-BFE2-EE60-8F792BABF5C7">
+<createdBy>kucza</createdBy>
+<createdTime>2020-10-10 08:44:17 UTC</createdTime>
+<commentInRDBMS><![CDATA[Left team player five.]]></commentInRDBMS>
+<ownerDesignName>SCSDM</ownerDesignName>
+<nullsAllowed>true</nullsAllowed>
+<useDomainConstraints>false</useDomainConstraints>
+<use>1</use>
+<logicalDatatype>LOGDT024</logicalDatatype>
+<dataTypeSize>255 CHAR</dataTypeSize>
+<ownDataTypeParameters>255 CHAR,,</ownDataTypeParameters>
+<autoIncrementCycle>false</autoIncrementCycle>
+</Column>
+<Column name="RT_PLAYER_ONE" id="22B3FA4F-E1D1-78E4-3393-E19AEA017368">
+<createdBy>kucza</createdBy>
+<createdTime>2020-10-10 08:44:17 UTC</createdTime>
+<commentInRDBMS><![CDATA[Right team player one.]]></commentInRDBMS>
+<ownerDesignName>SCSDM</ownerDesignName>
+<nullsAllowed>true</nullsAllowed>
+<useDomainConstraints>false</useDomainConstraints>
+<use>1</use>
+<logicalDatatype>LOGDT024</logicalDatatype>
+<dataTypeSize>255 CHAR</dataTypeSize>
+<ownDataTypeParameters>255 CHAR,,</ownDataTypeParameters>
+<autoIncrementCycle>false</autoIncrementCycle>
+</Column>
+<Column name="RT_PLAYER_TWO" id="7979C6C5-DEB0-CC40-67DA-1C64AE7885A7">
+<createdBy>kucza</createdBy>
+<createdTime>2020-10-10 08:44:17 UTC</createdTime>
+<commentInRDBMS><![CDATA[Right team player two.]]></commentInRDBMS>
+<ownerDesignName>SCSDM</ownerDesignName>
+<nullsAllowed>true</nullsAllowed>
+<useDomainConstraints>false</useDomainConstraints>
+<use>1</use>
+<logicalDatatype>LOGDT024</logicalDatatype>
+<dataTypeSize>255 CHAR</dataTypeSize>
+<ownDataTypeParameters>255 CHAR,,</ownDataTypeParameters>
+<autoIncrementCycle>false</autoIncrementCycle>
+</Column>
+<Column name="RT_PLAYER_THREE" id="42C1E5EE-38C7-3E9F-4EB5-F713FB7DE302">
+<createdBy>kucza</createdBy>
+<createdTime>2020-10-10 08:44:17 UTC</createdTime>
+<commentInRDBMS><![CDATA[Right team player three.]]></commentInRDBMS>
+<ownerDesignName>SCSDM</ownerDesignName>
+<nullsAllowed>true</nullsAllowed>
+<useDomainConstraints>false</useDomainConstraints>
+<use>1</use>
+<logicalDatatype>LOGDT024</logicalDatatype>
+<dataTypeSize>255 CHAR</dataTypeSize>
+<ownDataTypeParameters>255 CHAR,,</ownDataTypeParameters>
+<autoIncrementCycle>false</autoIncrementCycle>
+</Column>
+<Column name="RT_PLAYER_FOUR" id="9C50D8DF-6BEE-6C57-E309-175DF435A911">
+<createdBy>kucza</createdBy>
+<createdTime>2020-10-10 08:49:07 UTC</createdTime>
+<commentInRDBMS><![CDATA[Right team player four.]]></commentInRDBMS>
+<ownerDesignName>SCSDM</ownerDesignName>
+<nullsAllowed>true</nullsAllowed>
+<useDomainConstraints>false</useDomainConstraints>
+<use>1</use>
+<logicalDatatype>LOGDT024</logicalDatatype>
+<dataTypeSize>255 CHAR</dataTypeSize>
+<ownDataTypeParameters>255 CHAR,,</ownDataTypeParameters>
+<autoIncrementCycle>false</autoIncrementCycle>
+</Column>
+<Column name="RT_PLAYER_FIVE" id="54AE658C-F372-A613-BE96-02595D843A49">
+<createdBy>kucza</createdBy>
+<createdTime>2020-10-10 08:49:07 UTC</createdTime>
+<commentInRDBMS><![CDATA[Right team player five.]]></commentInRDBMS>
+<ownerDesignName>SCSDM</ownerDesignName>
+<nullsAllowed>true</nullsAllowed>
+<useDomainConstraints>false</useDomainConstraints>
+<use>1</use>
+<logicalDatatype>LOGDT024</logicalDatatype>
+<dataTypeSize>255 CHAR</dataTypeSize>
+<ownDataTypeParameters>255 CHAR,,</ownDataTypeParameters>
+<autoIncrementCycle>false</autoIncrementCycle>
+</Column>
+<Column name="SCSDM_MATCH_MATCH_RK" id="895DBBFD-C32B-8B10-7F0D-45BB7772A4A3">
+<createdBy>kucza</createdBy>
+<createdTime>2020-10-10 11:02:58 UTC</createdTime>
+<ownerDesignName>SCSDM</ownerDesignName>
+<useDomainConstraints>false</useDomainConstraints>
+<use>1</use>
+<logicalDatatype>LOGDT011</logicalDatatype>
+<ownDataTypeParameters>,,</ownDataTypeParameters>
+<previousColumn>false</previousColumn>
+<autoIncrementCycle>false</autoIncrementCycle>
+<associations>
+<colAssociation fkAssociation="C28FD319-1A41-285B-519E-31807550B31E" referredColumn="DF568EBE-2DAE-9F8A-63B8-5EA02A51FDE9"/>
+</associations>
+</Column>
+</columns>
+<indexes itemClass="oracle.dbtools.crest.model.design.relational.Index">
+<ind_PK_UK id="17B604BE-829D-9163-7365-C5EC4ED4B2C8" name="SCSDM_LINEUP_PK">
+<createdBy>kucza</createdBy>
+<createdTime>2020-10-10 09:34:43 UTC</createdTime>
+<ownerDesignName>SCSDM</ownerDesignName>
+<pk>true</pk>
+<indexState>Primary Constraint</indexState>
+<isSurrogateKey>false</isSurrogateKey>
+<indexColumnUsage>
+<colUsage columnID="4CD286CB-2DA0-A0E9-1B78-2DF2773A8092"/>
+</indexColumnUsage>
+</ind_PK_UK>
+<ind_PK_UK id="A0356E1E-DA3B-01D2-9BC0-6C4099CF5DCC" name="SCSDM_LINEUP_SCSDM_MATCH_FK">
+<createdBy>kucza</createdBy>
+<createdTime>2020-10-10 11:02:58 UTC</createdTime>
+<ownerDesignName>SCSDM</ownerDesignName>
+<indexState>Foreign Key</indexState>
+<isSurrogateKey>false</isSurrogateKey>
+<indexColumnUsage>
+<colUsage columnID="895DBBFD-C32B-8B10-7F0D-45BB7772A4A3"/>
+</indexColumnUsage>
+</ind_PK_UK>
+</indexes>
+</Table>

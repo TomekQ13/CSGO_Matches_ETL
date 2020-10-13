@@ -95,39 +95,42 @@ def scrape_match_details(details_url):
     
     lineups_dict = {}
     #get the two tables with lineups of the two teams and loop
-    tables = lineups.findAll("table", {"class": "table"});
-    
-    #loop by teams
+    tables = lineups.findAll("table", {"class": "table"});  
+
+
+       #loop by teams
     for cs_table in enumerate(tables):    
         players = cs_table[1].findAll("tr")[1].findAll("td", {"class": "player"})
-        
+        #here is also a possibility to get player details
+       
         #loop by players
-        for player in enumerate(players):
-            #here is possibility to get to player details
-            player_name = player[1].text[2:-2]
-     
+        for i in range(5):
+            
             #assign to the correct team - left or right team
-            if cs_table[0] == 0:
+            if cs_table[0] == 0:                
+                
                 try:
-                    lineups_dict["team_left_player_"+str(player[0])] = player_name
-                except:
-                    lineups_dict["team_left_player_"+str(player[0])] = 'PLAYER_NOT_FOUND'
-                    print("team_left_player_"+str(player[0]) + 'have not been found')
+                    player_name = players[i].text[2:-2]
+                    lineups_dict["team_left_player_"+str(i)] = player_name
+                except IndexError:
+                    lineups_dict["team_left_player_"+str(i)] = 'PLAYER_NOT_FOUND'
+                    print("team_left_player_"+str(i) + ' has not been found')
             else:
                 try:
-                    lineups_dict["team_right_player_"+str(player[0])] = player_name
-                except:
-                    lineups_dict["team_right_player_"+str(player[0])] = 'PLAYER_NOT_FOUND'
-                    print("team_right_player_"+str(player[0]) + 'have not been found')
-                    
-        #if there are 4 players add TBA as fifth player to avoid length mismatch
-        if len(players) == 4:
-            if cs_table[0] == 0:
-                lineups_dict['team_left_player_5'] = 'TBA'
-                print('Fiftth player for team left not found')
-            else:
-                lineups_dict['team_right_player_5'] = 'TBA'
-                print('Fifth player for team rigt not found')
+                    player_name = players[i].text[2:-2]
+                    lineups_dict["team_right_player_"+str(i)] = player_name
+                except IndexError:
+                    lineups_dict["team_right_player_"+str(i)] = 'PLAYER_NOT_FOUND'
+                    print("team_right_player_"+str(i) + ' has not been found')
+                 
+     #if there are 4 players add TBA as fifth player to avoid length mismatch
+#        if len(players) == 4:
+#            if cs_table[0] == 0:
+#                lineups_dict['team_left_player_5'] = 'TBA'
+#                print('Fifth player for team left not found')
+#            else:
+#                lineups_dict['team_right_player_5'] = 'TBA'
+#                print('Fifth player for team rigt not found')
         
     #world rank    
     team_left_ranking = lineups.findAll("div", {"class": "teamRanking"})[0].text

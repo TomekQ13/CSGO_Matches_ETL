@@ -1,0 +1,16 @@
+<?xml version = '1.0' encoding = 'UTF-8'?>
+<FKIndexAssociation class="oracle.dbtools.crest.model.design.relational.FKIndexAssociation" directorySegmentName="seg_0" id="AA6CC7E5-B630-FD70-1C96-69BB8892A2BB" containerWithKeyObject="67A6A98C-C9ED-A188-92FC-0E97A7962DBE" localFKIndex="2B114A5F-FD93-8D58-89DD-9909E897C5A4" name="SCSDM_MAP_SCSDM_MATCH_FK">
+<createdBy>kucza</createdBy>
+<createdTime>2020-10-10 11:14:52 UTC</createdTime>
+<ownerDesignName>SCSDM</ownerDesignName>
+<referredTableLongName>SCSDM_MATCH</referredTableLongName>
+<deleteRule>NO ACTION</deleteRule>
+<referredTableID>959FA33D-CEFD-8B73-B40A-D71E77BE15F6</referredTableID>
+<keyObject>A1F764DD-65B0-DF48-DDF6-AB8E371B39FD</keyObject>
+<referredKeyID>A1F764DD-65B0-DF48-DDF6-AB8E371B39FD</referredKeyID>
+<mandatory>true</mandatory>
+<refColNames>MATCH_RK</refColNames>
+<transferable>true</transferable>
+<rely>false</rely>
+<columnDependencyConstraintGenerateInDDL>true</columnDependencyConstraintGenerateInDDL>
+</FKIndexAssociation>

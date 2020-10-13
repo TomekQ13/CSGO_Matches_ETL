@@ -30,5 +30,35 @@ for i in range(10):
         continue
     print(i)
     
+url = 'https://www.hltv.org/matches/2314123/mask-off-vs-last-picks-dreamhack-open-montreal-2017-north-america-open-qualifier'
+final_dict, results_pdf, teams_past_matches, h2h_table = scraper.scrape_match_details(url)
+
+import db_connect as dc
+con = dc.db_con()
+con.truncate_interface()
+
+
+
+
+
+import preprocessing_functions as pf
+     
+details_page_soup = pf.open_url(url)
+lineups = details_page_soup.find("div", {"class": "lineups"})
+
+tables = lineups.findAll("table", {"class": "table"})
+len(tables[1].findAll("td", {"class": "player"}))
+
+for i in range(4):
+    print(i)
     
-final_dict, results_pdf, teams_past_matches, h2h_table = scraper.scrape_match_details('https://www.hltv.org/matches/2339713/mc-vs-rock-candy-esea-mdl-season-33-australia')
+    
+import sqlalchemy
+import scsdm_etl.common
+db_connection = sqlalchemy.create_engine('oracle+cx_oracle://C##tkuczak:TOMCIO@@@@localhost:1521')
+                                
+results = db_connection.execute(query_columns)
+
+query_columns = "select column_name from sys.all_tab_columns where owner = 'C##TKUCZAK' and table_name = 'IF_FINAL_DICTIONARY' and column_name not like 'T_%'"
+columns_list = scsdm_etl.common.query_to_list(db_connection, query_columns)
+column_str = ', '.join(columns_list)

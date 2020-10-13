@@ -1,0 +1,129 @@
+<?xml version = '1.0' encoding = 'UTF-8'?>
+<Table class="oracle.dbtools.crest.model.design.relational.Table" directorySegmentName="seg_0" id="67A6A98C-C9ED-A188-92FC-0E97A7962DBE" name="SCSDM_MAP">
+<createdBy>kucza</createdBy>
+<createdTime>2020-10-10 09:13:48 UTC</createdTime>
+<comment><![CDATA[The table stores information about maps played in a match.]]></comment>
+<commentInRDBMS><![CDATA[The table stores information about maps played in a match.]]></commentInRDBMS>
+<ownerDesignName>SCSDM</ownerDesignName>
+<ordsAlias>table_6</ordsAlias>
+<allowColumnReorder>false</allowColumnReorder>
+<existDependencyGenerateInDDl>true</existDependencyGenerateInDDl>
+<parsed>true</parsed>
+<columns itemClass="oracle.dbtools.crest.model.design.relational.Column">
+<Column name="MAP_RK" id="8B63869E-0144-ED42-638C-783B593D0BB4">
+<createdBy>kucza</createdBy>
+<createdTime>2020-10-10 09:34:24 UTC</createdTime>
+<ownerDesignName>SCSDM</ownerDesignName>
+<useDomainConstraints>false</useDomainConstraints>
+<use>1</use>
+<logicalDatatype>LOGDT011</logicalDatatype>
+<ownDataTypeParameters>,,</ownDataTypeParameters>
+<autoIncrementCycle>false</autoIncrementCycle>
+</Column>
+<Column name="INSERT_DTTM" id="DC0F44AB-230F-86FE-D189-305A345155D5">
+<createdBy>kucza</createdBy>
+<createdTime>2020-10-10 09:34:24 UTC</createdTime>
+<ownerDesignName>SCSDM</ownerDesignName>
+<nullsAllowed>true</nullsAllowed>
+<useDomainConstraints>false</useDomainConstraints>
+<use>1</use>
+<logicalDatatype>LOGDT011</logicalDatatype>
+<ownDataTypeParameters>,,</ownDataTypeParameters>
+<autoIncrementCycle>false</autoIncrementCycle>
+</Column>
+<Column name="MATCH_RK" id="EEADC14C-B726-B38F-5C87-FD72A85E0AE4">
+<createdBy>kucza</createdBy>
+<createdTime>2020-10-10 09:34:24 UTC</createdTime>
+<commentInRDBMS><![CDATA[The retained key of the match.]]></commentInRDBMS>
+<ownerDesignName>SCSDM</ownerDesignName>
+<useDomainConstraints>false</useDomainConstraints>
+<use>1</use>
+<logicalDatatype>LOGDT011</logicalDatatype>
+<ownDataTypeParameters>,,</ownDataTypeParameters>
+<autoIncrementCycle>false</autoIncrementCycle>
+</Column>
+<Column name="MAP_NAME" id="1DFADC7D-4F1D-D5E9-E2DC-706D73FC7161">
+<createdBy>kucza</createdBy>
+<createdTime>2020-10-10 09:34:24 UTC</createdTime>
+<commentInRDBMS><![CDATA[The name of the map the match was played on.]]></commentInRDBMS>
+<ownerDesignName>SCSDM</ownerDesignName>
+<nullsAllowed>true</nullsAllowed>
+<useDomainConstraints>false</useDomainConstraints>
+<use>1</use>
+<logicalDatatype>LOGDT024</logicalDatatype>
+<dataTypeSize>255 CHAR</dataTypeSize>
+<ownDataTypeParameters>255 CHAR,,</ownDataTypeParameters>
+<autoIncrementCycle>false</autoIncrementCycle>
+</Column>
+<Column name="MAP_NUMBER" id="9709E30F-C89A-CD3F-9ED9-11C4A69DEF73">
+<createdBy>kucza</createdBy>
+<createdTime>2020-10-10 09:34:24 UTC</createdTime>
+<commentInRDBMS><![CDATA[The number of the map in the match.]]></commentInRDBMS>
+<ownerDesignName>SCSDM</ownerDesignName>
+<useDomainConstraints>false</useDomainConstraints>
+<use>1</use>
+<logicalDatatype>LOGDT011</logicalDatatype>
+<ownDataTypeParameters>,,</ownDataTypeParameters>
+<autoIncrementCycle>false</autoIncrementCycle>
+</Column>
+<Column name="LT_SCORE" id="8EBFBD37-45F3-2604-CF70-4B4C84E6FE9A">
+<createdBy>kucza</createdBy>
+<createdTime>2020-10-10 09:34:24 UTC</createdTime>
+<commentInRDBMS><![CDATA[The score of the left team.]]></commentInRDBMS>
+<ownerDesignName>SCSDM</ownerDesignName>
+<useDomainConstraints>false</useDomainConstraints>
+<use>1</use>
+<logicalDatatype>LOGDT011</logicalDatatype>
+<ownDataTypeParameters>,,</ownDataTypeParameters>
+<autoIncrementCycle>false</autoIncrementCycle>
+</Column>
+<Column name="RT_SCORE" id="236A4D1B-439B-3BF4-52C0-75955D1A47D0">
+<createdBy>kucza</createdBy>
+<createdTime>2020-10-10 09:34:24 UTC</createdTime>
+<commentInRDBMS><![CDATA[The score of the right team.]]></commentInRDBMS>
+<ownerDesignName>SCSDM</ownerDesignName>
+<useDomainConstraints>false</useDomainConstraints>
+<use>1</use>
+<logicalDatatype>LOGDT011</logicalDatatype>
+<ownDataTypeParameters>,,</ownDataTypeParameters>
+<autoIncrementCycle>false</autoIncrementCycle>
+</Column>
+<Column name="SCSDM_MATCH_MATCH_RK" id="74B9E87F-9D98-3B98-54F4-F40399830384">
+<createdBy>kucza</createdBy>
+<createdTime>2020-10-10 11:14:52 UTC</createdTime>
+<ownerDesignName>SCSDM</ownerDesignName>
+<useDomainConstraints>false</useDomainConstraints>
+<use>1</use>
+<logicalDatatype>LOGDT011</logicalDatatype>
+<ownDataTypeParameters>,,</ownDataTypeParameters>
+<previousColumn>false</previousColumn>
+<autoIncrementCycle>false</autoIncrementCycle>
+<associations>
+<colAssociation fkAssociation="AA6CC7E5-B630-FD70-1C96-69BB8892A2BB" referredColumn="DF568EBE-2DAE-9F8A-63B8-5EA02A51FDE9"/>
+</associations>
+</Column>
+</columns>
+<indexes itemClass="oracle.dbtools.crest.model.design.relational.Index">
+<ind_PK_UK id="5F5B09A6-D2DA-5B68-DD89-83CD2C7FA476" name="SCSDM_MAP_PK">
+<createdBy>kucza</createdBy>
+<createdTime>2020-10-10 09:34:24 UTC</createdTime>
+<ownerDesignName>SCSDM</ownerDesignName>
+<pk>true</pk>
+<indexState>Primary Constraint</indexState>
+<isSurrogateKey>false</isSurrogateKey>
+<indexColumnUsage>
+<colUsage columnID="8B63869E-0144-ED42-638C-783B593D0BB4"/>
+</indexColumnUsage>
+</ind_PK_UK>
+<ind_PK_UK id="2B114A5F-FD93-8D58-89DD-9909E897C5A4" name="SCSDM_MAP_SCSDM_MATCH_FK">
+<createdBy>kucza</createdBy>
+<createdTime>2020-10-10 11:14:52 UTC</createdTime>
+<ownerDesignName>SCSDM</ownerDesignName>
+<indexState>Foreign Key</indexState>
+<isSurrogateKey>false</isSurrogateKey>
+<indexColumnUsage>
+<colUsage columnID="74B9E87F-9D98-3B98-54F4-F40399830384"/>
+</indexColumnUsage>
+</ind_PK_UK>
+</indexes>
+</Table>

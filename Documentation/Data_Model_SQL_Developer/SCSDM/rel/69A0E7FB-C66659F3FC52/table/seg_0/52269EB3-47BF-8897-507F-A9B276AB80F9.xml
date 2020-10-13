@@ -1,0 +1,362 @@
+<?xml version = '1.0' encoding = 'UTF-8'?>
+<Table class="oracle.dbtools.crest.model.design.relational.Table" directorySegmentName="seg_0" id="52269EB3-47BF-8897-507F-A9B276AB80F9" name="IF_FINAL_DICTIONARY">
+<sourceDDLFile>Schema_DDL.sql</sourceDDLFile>
+<createdBy>kucza</createdBy>
+<createdTime>2020-10-10 08:25:56 UTC</createdTime>
+<ownerDesignName>SCSDM</ownerDesignName>
+<importedID>736ED33C-B215-C5B9-706D-D71500B54797</importedID>
+<allowColumnReorder>false</allowColumnReorder>
+<existDependencyGenerateInDDl>true</existDependencyGenerateInDDl>
+<parsed>true</parsed>
+<columns itemClass="oracle.dbtools.crest.model.design.relational.Column">
+<Column name="MATCH_URL" id="E223F84B-4A90-A800-E58C-64DA8326C57F">
+<sourceDDLFile>Schema_DDL.sql</sourceDDLFile>
+<createdBy>kucza</createdBy>
+<createdTime>2020-10-10 08:25:56 UTC</createdTime>
+<ownerDesignName>SCSDM</ownerDesignName>
+<importedID>86F9C908-2233-3D7A-5C17-EFC50037DC4A</importedID>
+<use>0</use>
+<logicalDatatype>LOGDT024</logicalDatatype>
+<domain>43AEB319-FE66-1CE3-2328-C18BCAE02398</domain>
+<ownDataTypeParameters>,,</ownDataTypeParameters>
+<autoIncrementCycle>false</autoIncrementCycle>
+</Column>
+<Column name="LEFT_TEAM" id="0D619DA1-55F6-0277-AD8D-234BBD0C8AD8">
+<sourceDDLFile>Schema_DDL.sql</sourceDDLFile>
+<createdBy>kucza</createdBy>
+<createdTime>2020-10-10 08:25:56 UTC</createdTime>
+<ownerDesignName>SCSDM</ownerDesignName>
+<importedID>87B35D95-309F-A7C2-DA77-1A72D5C48498</importedID>
+<use>0</use>
+<logicalDatatype>LOGDT024</logicalDatatype>
+<domain>D8C03328-9B3F-5F06-AA72-BBA512B4C609</domain>
+<ownDataTypeParameters>,,</ownDataTypeParameters>
+<autoIncrementCycle>false</autoIncrementCycle>
+</Column>
+<Column name="RIGHT_TEAM" id="533508DD-15BA-4F54-6FA5-4D1E91AFDE16">
+<sourceDDLFile>Schema_DDL.sql</sourceDDLFile>
+<createdBy>kucza</createdBy>
+<createdTime>2020-10-10 08:25:56 UTC</createdTime>
+<ownerDesignName>SCSDM</ownerDesignName>
+<importedID>DCDC639F-E618-2DCD-F4BE-ABFC63A809E8</importedID>
+<use>0</use>
+<logicalDatatype>LOGDT024</logicalDatatype>
+<domain>D8C03328-9B3F-5F06-AA72-BBA512B4C609</domain>
+<ownDataTypeParameters>,,</ownDataTypeParameters>
+<autoIncrementCycle>false</autoIncrementCycle>
+</Column>
+<Column name="LEFT_TEAM_NATIONALITY" id="0848B926-EAFD-3168-627A-4B91A47A85F9">
+<sourceDDLFile>Schema_DDL.sql</sourceDDLFile>
+<createdBy>kucza</createdBy>
+<createdTime>2020-10-10 08:25:56 UTC</createdTime>
+<ownerDesignName>SCSDM</ownerDesignName>
+<importedID>67FFA641-A2E4-B3FE-3B56-E8A60297FB7E</importedID>
+<use>0</use>
+<logicalDatatype>LOGDT024</logicalDatatype>
+<domain>D8C03328-9B3F-5F06-AA72-BBA512B4C609</domain>
+<ownDataTypeParameters>,,</ownDataTypeParameters>
+<autoIncrementCycle>false</autoIncrementCycle>
+</Column>
+<Column name="LEFT_TEAM_MATCH_POINTS" id="5B266D1C-56D1-A676-833B-8EA8C674AEB4">
+<sourceDDLFile>Schema_DDL.sql</sourceDDLFile>
+<createdBy>kucza</createdBy>
+<createdTime>2020-10-10 08:25:56 UTC</createdTime>
+<ownerDesignName>SCSDM</ownerDesignName>
+<importedID>17D37093-4CE6-078E-66A6-C2D82132FFF0</importedID>
+<use>0</use>
+<logicalDatatype>LOGDT024</logicalDatatype>
+<domain>D8C03328-9B3F-5F06-AA72-BBA512B4C609</domain>
+<ownDataTypeParameters>,,</ownDataTypeParameters>
+<autoIncrementCycle>false</autoIncrementCycle>
+</Column>
+<Column name="LEFT_TEAM_RANKING" id="7D5B1C41-0973-E716-3F34-030D88D03B5D">
+<sourceDDLFile>Schema_DDL.sql</sourceDDLFile>
+<createdBy>kucza</createdBy>
+<createdTime>2020-10-10 08:25:56 UTC</createdTime>
+<ownerDesignName>SCSDM</ownerDesignName>
+<importedID>41E68079-499E-C54E-E816-D3E6DAB9FCAB</importedID>
+<use>0</use>
+<logicalDatatype>LOGDT024</logicalDatatype>
+<domain>D8C03328-9B3F-5F06-AA72-BBA512B4C609</domain>
+<ownDataTypeParameters>,,</ownDataTypeParameters>
+<autoIncrementCycle>false</autoIncrementCycle>
+</Column>
+<Column name="RIGHT_TEAM_NATIONALITY" id="F9D4DD04-9932-E14B-2291-402EF0BA96AC">
+<sourceDDLFile>Schema_DDL.sql</sourceDDLFile>
+<createdBy>kucza</createdBy>
+<createdTime>2020-10-10 08:25:56 UTC</createdTime>
+<ownerDesignName>SCSDM</ownerDesignName>
+<importedID>BB3BAEA2-2112-9DD7-F8DD-A7D782FEE422</importedID>
+<use>0</use>
+<logicalDatatype>LOGDT024</logicalDatatype>
+<domain>D8C03328-9B3F-5F06-AA72-BBA512B4C609</domain>
+<ownDataTypeParameters>,,</ownDataTypeParameters>
+<autoIncrementCycle>false</autoIncrementCycle>
+</Column>
+<Column name="RIGHT_TEAM_MATCH_POINTS" id="4042B31B-A46F-8E2A-9319-8A1D631BCF42">
+<sourceDDLFile>Schema_DDL.sql</sourceDDLFile>
+<createdBy>kucza</createdBy>
+<createdTime>2020-10-10 08:25:56 UTC</createdTime>
+<ownerDesignName>SCSDM</ownerDesignName>
+<importedID>C070A1EE-17BD-EFAB-D802-C769C33D28DE</importedID>
+<use>0</use>
+<logicalDatatype>LOGDT024</logicalDatatype>
+<domain>D8C03328-9B3F-5F06-AA72-BBA512B4C609</domain>
+<ownDataTypeParameters>,,</ownDataTypeParameters>
+<autoIncrementCycle>false</autoIncrementCycle>
+</Column>
+<Column name="RIGHT_TEAM_RANKING" id="0D54C43A-CA99-4BBE-1FE3-88A406CE248B">
+<sourceDDLFile>Schema_DDL.sql</sourceDDLFile>
+<createdBy>kucza</createdBy>
+<createdTime>2020-10-10 08:25:56 UTC</createdTime>
+<ownerDesignName>SCSDM</ownerDesignName>
+<importedID>3F23C37A-3CA8-8B24-41E1-7EE43389DA14</importedID>
+<use>0</use>
+<logicalDatatype>LOGDT024</logicalDatatype>
+<domain>D8C03328-9B3F-5F06-AA72-BBA512B4C609</domain>
+<ownDataTypeParameters>,,</ownDataTypeParameters>
+<autoIncrementCycle>false</autoIncrementCycle>
+</Column>
+<Column name="TOURNAMENT" id="F15E1159-7C05-CE7F-8FD1-56A0A18F6DFD">
+<sourceDDLFile>Schema_DDL.sql</sourceDDLFile>
+<createdBy>kucza</createdBy>
+<createdTime>2020-10-10 08:25:56 UTC</createdTime>
+<ownerDesignName>SCSDM</ownerDesignName>
+<importedID>69D50862-8321-3C8A-2730-D40A055F1AEA</importedID>
+<use>0</use>
+<logicalDatatype>LOGDT024</logicalDatatype>
+<domain>D8C03328-9B3F-5F06-AA72-BBA512B4C609</domain>
+<ownDataTypeParameters>,,</ownDataTypeParameters>
+<autoIncrementCycle>false</autoIncrementCycle>
+</Column>
+<Column name="HOUR_OF_MATCH" id="2CB6DFE3-BDE5-440A-E5F1-C062ACE528E4">
+<sourceDDLFile>Schema_DDL.sql</sourceDDLFile>
+<createdBy>kucza</createdBy>
+<createdTime>2020-10-10 08:25:56 UTC</createdTime>
+<ownerDesignName>SCSDM</ownerDesignName>
+<importedID>CCADBFAD-16E8-5473-0D92-D384076D450F</importedID>
+<use>0</use>
+<logicalDatatype>LOGDT024</logicalDatatype>
+<domain>D8C03328-9B3F-5F06-AA72-BBA512B4C609</domain>
+<ownDataTypeParameters>,,</ownDataTypeParameters>
+<autoIncrementCycle>false</autoIncrementCycle>
+</Column>
+<Column name="DAY_OF_MATCH" id="93711318-101B-0B51-A7CC-8A16671CF80E">
+<sourceDDLFile>Schema_DDL.sql</sourceDDLFile>
+<createdBy>kucza</createdBy>
+<createdTime>2020-10-10 08:25:56 UTC</createdTime>
+<ownerDesignName>SCSDM</ownerDesignName>
+<importedID>1E726D56-4966-72C5-D9CA-6BDBA64A751E</importedID>
+<use>0</use>
+<logicalDatatype>LOGDT024</logicalDatatype>
+<domain>D8C03328-9B3F-5F06-AA72-BBA512B4C609</domain>
+<ownDataTypeParameters>,,</ownDataTypeParameters>
+<autoIncrementCycle>false</autoIncrementCycle>
+</Column>
+<Column name="MONTH_OF_MATCH" id="892BFA92-40ED-A298-00A5-C2FF36C116DE">
+<sourceDDLFile>Schema_DDL.sql</sourceDDLFile>
+<createdBy>kucza</createdBy>
+<createdTime>2020-10-10 08:25:56 UTC</createdTime>
+<ownerDesignName>SCSDM</ownerDesignName>
+<importedID>2352C31D-CB7B-CF1F-FDA7-0DE0826B57BD</importedID>
+<use>0</use>
+<logicalDatatype>LOGDT024</logicalDatatype>
+<domain>D8C03328-9B3F-5F06-AA72-BBA512B4C609</domain>
+<ownDataTypeParameters>,,</ownDataTypeParameters>
+<autoIncrementCycle>false</autoIncrementCycle>
+</Column>
+<Column name="YEAR_OF_MATCH" id="979715C5-DD43-F7D3-BED6-FBF97F29D139">
+<sourceDDLFile>Schema_DDL.sql</sourceDDLFile>
+<createdBy>kucza</createdBy>
+<createdTime>2020-10-10 08:25:56 UTC</createdTime>
+<ownerDesignName>SCSDM</ownerDesignName>
+<importedID>D982BE1D-93A4-82FC-6D01-32834DD7BAD3</importedID>
+<use>0</use>
+<logicalDatatype>LOGDT024</logicalDatatype>
+<domain>D8C03328-9B3F-5F06-AA72-BBA512B4C609</domain>
+<ownDataTypeParameters>,,</ownDataTypeParameters>
+<autoIncrementCycle>false</autoIncrementCycle>
+</Column>
+<Column name="H2H_LEFT_TEAM_WINS" id="673B8330-F3F7-2C14-A7A4-B71B6B6D703E">
+<sourceDDLFile>Schema_DDL.sql</sourceDDLFile>
+<createdBy>kucza</createdBy>
+<createdTime>2020-10-10 08:25:56 UTC</createdTime>
+<ownerDesignName>SCSDM</ownerDesignName>
+<importedID>922FDF0F-5C64-583D-6EC7-C9262D146359</importedID>
+<use>0</use>
+<logicalDatatype>LOGDT024</logicalDatatype>
+<domain>D8C03328-9B3F-5F06-AA72-BBA512B4C609</domain>
+<ownDataTypeParameters>,,</ownDataTypeParameters>
+<autoIncrementCycle>false</autoIncrementCycle>
+</Column>
+<Column name="H2H_RIGHT_TEAM_WINS" id="EC6B32AB-3604-B3B2-9789-42D89E69DF28">
+<sourceDDLFile>Schema_DDL.sql</sourceDDLFile>
+<createdBy>kucza</createdBy>
+<createdTime>2020-10-10 08:25:56 UTC</createdTime>
+<ownerDesignName>SCSDM</ownerDesignName>
+<importedID>768C3803-C291-8DCC-D95A-49035939092A</importedID>
+<use>0</use>
+<logicalDatatype>LOGDT024</logicalDatatype>
+<domain>D8C03328-9B3F-5F06-AA72-BBA512B4C609</domain>
+<ownDataTypeParameters>,,</ownDataTypeParameters>
+<autoIncrementCycle>false</autoIncrementCycle>
+</Column>
+<Column name="OVERTIMES" id="F8C05F8E-658C-784A-2ED2-5FF90EE900EB">
+<sourceDDLFile>Schema_DDL.sql</sourceDDLFile>
+<createdBy>kucza</createdBy>
+<createdTime>2020-10-10 08:25:56 UTC</createdTime>
+<ownerDesignName>SCSDM</ownerDesignName>
+<importedID>793CA106-E5DA-512C-86D8-1514715618F5</importedID>
+<use>0</use>
+<logicalDatatype>LOGDT024</logicalDatatype>
+<domain>D8C03328-9B3F-5F06-AA72-BBA512B4C609</domain>
+<ownDataTypeParameters>,,</ownDataTypeParameters>
+<autoIncrementCycle>false</autoIncrementCycle>
+</Column>
+<Column name="MATCH_TYPE" id="36C7D857-F763-8DE4-B95B-B67A57153AF6">
+<sourceDDLFile>Schema_DDL.sql</sourceDDLFile>
+<createdBy>kucza</createdBy>
+<createdTime>2020-10-10 08:25:56 UTC</createdTime>
+<ownerDesignName>SCSDM</ownerDesignName>
+<importedID>49EAAF80-6BBE-5ED0-72B0-2214D0F82C24</importedID>
+<use>0</use>
+<logicalDatatype>LOGDT024</logicalDatatype>
+<domain>B0B49EB6-247E-23B1-A029-6825AA01149A</domain>
+<ownDataTypeParameters>,,</ownDataTypeParameters>
+<autoIncrementCycle>false</autoIncrementCycle>
+</Column>
+<Column name="LEFT_TEAM_PLAYER_ONE" id="52853FBA-93EE-B6DA-9C75-55CBC1B2D3D4">
+<sourceDDLFile>Schema_DDL.sql</sourceDDLFile>
+<createdBy>kucza</createdBy>
+<createdTime>2020-10-10 08:25:56 UTC</createdTime>
+<ownerDesignName>SCSDM</ownerDesignName>
+<importedID>85EE8598-5E2F-940A-8AD8-F9CA912FBE11</importedID>
+<use>0</use>
+<logicalDatatype>LOGDT024</logicalDatatype>
+<domain>D8C03328-9B3F-5F06-AA72-BBA512B4C609</domain>
+<ownDataTypeParameters>,,</ownDataTypeParameters>
+<autoIncrementCycle>false</autoIncrementCycle>
+</Column>
+<Column name="LEFT_TEAM_PLAYER_TWO" id="9B770890-C966-0E07-9560-D7B6B650B10C">
+<sourceDDLFile>Schema_DDL.sql</sourceDDLFile>
+<createdBy>kucza</createdBy>
+<createdTime>2020-10-10 08:25:56 UTC</createdTime>
+<ownerDesignName>SCSDM</ownerDesignName>
+<importedID>E16BF8D7-9974-FFAC-F76F-39470959C9C0</importedID>
+<use>0</use>
+<logicalDatatype>LOGDT024</logicalDatatype>
+<domain>D8C03328-9B3F-5F06-AA72-BBA512B4C609</domain>
+<ownDataTypeParameters>,,</ownDataTypeParameters>
+<autoIncrementCycle>false</autoIncrementCycle>
+</Column>
+<Column name="LEFT_TEAM_PLAYER_THREE" id="E75938BD-E866-D44C-BE37-3973A980E2CD">
+<sourceDDLFile>Schema_DDL.sql</sourceDDLFile>
+<createdBy>kucza</createdBy>
+<createdTime>2020-10-10 08:25:56 UTC</createdTime>
+<ownerDesignName>SCSDM</ownerDesignName>
+<importedID>EFEEB0E6-87E0-744F-6078-078F03E0D2BE</importedID>
+<use>0</use>
+<logicalDatatype>LOGDT024</logicalDatatype>
+<domain>D8C03328-9B3F-5F06-AA72-BBA512B4C609</domain>
+<ownDataTypeParameters>,,</ownDataTypeParameters>
+<autoIncrementCycle>false</autoIncrementCycle>
+</Column>
+<Column name="LEFT_TEAM_PLAYER_FOUR" id="6ACB6F51-690D-ED5D-35F2-DA88ADDD9215">
+<sourceDDLFile>Schema_DDL.sql</sourceDDLFile>
+<createdBy>kucza</createdBy>
+<createdTime>2020-10-10 08:25:56 UTC</createdTime>
+<ownerDesignName>SCSDM</ownerDesignName>
+<importedID>B43020F5-E8D9-CA26-8C7B-5CE71D869E13</importedID>
+<use>0</use>
+<logicalDatatype>LOGDT024</logicalDatatype>
+<domain>E74D611B-FCBD-3FAC-6A64-7614BEA84E07</domain>
+<ownDataTypeParameters>,,</ownDataTypeParameters>
+<autoIncrementCycle>false</autoIncrementCycle>
+</Column>
+<Column name="LEFT_TEAM_PLAYER_FIVE" id="0239F972-2D45-9318-7AB3-393AA4C7AD40">
+<sourceDDLFile>Schema_DDL.sql</sourceDDLFile>
+<createdBy>kucza</createdBy>
+<createdTime>2020-10-10 08:25:56 UTC</createdTime>
+<ownerDesignName>SCSDM</ownerDesignName>
+<importedID>8BEE1E15-E76E-AC88-399B-592CE21791CB</importedID>
+<use>0</use>
+<logicalDatatype>LOGDT024</logicalDatatype>
+<domain>D8C03328-9B3F-5F06-AA72-BBA512B4C609</domain>
+<ownDataTypeParameters>,,</ownDataTypeParameters>
+<autoIncrementCycle>false</autoIncrementCycle>
+</Column>
+<Column name="RIGHT_TEAM_PLAYER_ONE" id="B1850CAC-EEBF-1228-0F08-1A07BAC1C5B6">
+<sourceDDLFile>Schema_DDL.sql</sourceDDLFile>
+<createdBy>kucza</createdBy>
+<createdTime>2020-10-10 08:25:56 UTC</createdTime>
+<ownerDesignName>SCSDM</ownerDesignName>
+<importedID>08F0521A-4B7F-1F30-5BE6-894A63D132C8</importedID>
+<use>0</use>
+<logicalDatatype>LOGDT024</logicalDatatype>
+<domain>D8C03328-9B3F-5F06-AA72-BBA512B4C609</domain>
+<ownDataTypeParameters>,,</ownDataTypeParameters>
+<autoIncrementCycle>false</autoIncrementCycle>
+</Column>
+<Column name="RIGHT_TEAM_PLAYER_TWO" id="5F605EB2-09BB-1867-548A-0D6552460634">
+<sourceDDLFile>Schema_DDL.sql</sourceDDLFile>
+<createdBy>kucza</createdBy>
+<createdTime>2020-10-10 08:25:56 UTC</createdTime>
+<ownerDesignName>SCSDM</ownerDesignName>
+<importedID>D4585706-EC01-F9D1-2BB7-8CC5B36BBF58</importedID>
+<use>0</use>
+<logicalDatatype>LOGDT024</logicalDatatype>
+<domain>D8C03328-9B3F-5F06-AA72-BBA512B4C609</domain>
+<ownDataTypeParameters>,,</ownDataTypeParameters>
+<autoIncrementCycle>false</autoIncrementCycle>
+</Column>
+<Column name="RIGHT_TEAM_PLAYER_THREE" id="293F5EFF-9CDB-9FE7-9BAA-BD95A8556115">
+<sourceDDLFile>Schema_DDL.sql</sourceDDLFile>
+<createdBy>kucza</createdBy>
+<createdTime>2020-10-10 08:25:56 UTC</createdTime>
+<ownerDesignName>SCSDM</ownerDesignName>
+<importedID>F5F92867-CA43-4480-4BD9-122F03A26CBB</importedID>
+<use>0</use>
+<logicalDatatype>LOGDT024</logicalDatatype>
+<domain>D8C03328-9B3F-5F06-AA72-BBA512B4C609</domain>
+<ownDataTypeParameters>,,</ownDataTypeParameters>
+<autoIncrementCycle>false</autoIncrementCycle>
+</Column>
+<Column name="RIGHT_TEAM_PLAYER_FOUR" id="CCBC6AC7-59B3-AEFF-7368-769E04230BEB">
+<sourceDDLFile>Schema_DDL.sql</sourceDDLFile>
+<createdBy>kucza</createdBy>
+<createdTime>2020-10-10 08:25:56 UTC</createdTime>
+<ownerDesignName>SCSDM</ownerDesignName>
+<importedID>95C24706-5DD7-1D23-D600-A84C020AAAEB</importedID>
+<use>0</use>
+<logicalDatatype>LOGDT024</logicalDatatype>
+<domain>D8C03328-9B3F-5F06-AA72-BBA512B4C609</domain>
+<ownDataTypeParameters>,,</ownDataTypeParameters>
+<autoIncrementCycle>false</autoIncrementCycle>
+</Column>
+<Column name="RIGHT_TEAM_PLAYER_FIVE" id="ABB6A8AD-084F-7FE3-E999-223CA2369ADD">
+<sourceDDLFile>Schema_DDL.sql</sourceDDLFile>
+<createdBy>kucza</createdBy>
+<createdTime>2020-10-10 08:25:56 UTC</createdTime>
+<ownerDesignName>SCSDM</ownerDesignName>
+<importedID>A90C6835-9DC9-A57F-7C68-FFD61398B316</importedID>
+<use>0</use>
+<logicalDatatype>LOGDT024</logicalDatatype>
+<domain>D8C03328-9B3F-5F06-AA72-BBA512B4C609</domain>
+<ownDataTypeParameters>,,</ownDataTypeParameters>
+<autoIncrementCycle>false</autoIncrementCycle>
+</Column>
+<Column name="T_INSERT_DTTM" id="7A9A66DE-BD89-42D8-0E8D-A9BADAAE9DB4">
+<sourceDDLFile>Schema_DDL.sql</sourceDDLFile>
+<createdBy>kucza</createdBy>
+<createdTime>2020-10-10 08:25:56 UTC</createdTime>
+<ownerDesignName>SCSDM</ownerDesignName>
+<importedID>1A1335F3-4401-131C-3F01-60680B26BF0B</importedID>
+<use>0</use>
+<logicalDatatype>LOGDT047</logicalDatatype>
+<domain>01DA9667-3085-D54D-B040-B25BF2049A8B</domain>
+<defaultValue>current_timestamp</defaultValue>
+<ownDataTypeParameters>,,</ownDataTypeParameters>
+<autoIncrementCycle>false</autoIncrementCycle>
+</Column>
+</columns>
+</Table>

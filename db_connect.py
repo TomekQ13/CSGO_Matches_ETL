@@ -1,27 +1,32 @@
-#currently this module is redundant
-import cx_Oracle
-import config
+#module will consist of function to manage sql
 
 
-def start_con():
-    connection = None
-    try:
-        connection = cx_Oracle.connect(
-            config.username,
-            config.password,
-            config.dsn,
-            encoding=config.encoding)
-    
-        # show the version of the Oracle Database
-        print(connection.version)
-    except cx_Oracle.Error as error:
-        print(error)
-    finally:
-        return connection    
-    #    # release the connection
-    #    if connection:
-    #        connection.close()
-    
-    
-def stop_con(connection):
-    connection.close()
+class db_con:
+   #this class is supoosed to make executing queries and retrieving results very easy      
+   
+   
+   def __init__(self, connect_string = 'oracle+cx_oracle://C##tkuczak:TOMCIO@@@@localhost:1521'):
+                import sqlalchemy as sql
+                
+                
+                self.engine = sql.create_engine(connect_string)
+                self.connect_string = 'oracle+cx_oracle://C##tkuczak:TOMCIO@@@@localhost:1521'
+                                                    
+   def truncate_interface(self,
+                          query1 = 'truncate table C##TKUCZAK.IF_HEAD_TO_HEAD',
+                          query2 = 'truncate table C##TKUCZAK.IF_RESULTS_PDF',
+                          query3 = 'truncate table C##TKUCZAK.IF_TEAMS_PAST_MATCHES',
+                          query4 = 'delete from C##TKUCZAK.IF_FINAL_DICTIONARY'):
+                          self.engine.execute(query1)
+                          self.engine.execute(query2)
+                          self.engine.execute(query3)
+                          self.engine.execute(query4)
+                          
+                          
+                          def select_to_pandas(sql, con = self.engine):
+                             import pandas as pd
+                             pd.read_sql(sql, con)
+
+                          
+                            
+                          

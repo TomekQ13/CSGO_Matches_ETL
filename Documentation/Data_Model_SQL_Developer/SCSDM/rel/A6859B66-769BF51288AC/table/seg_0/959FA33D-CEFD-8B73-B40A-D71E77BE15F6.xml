@@ -1,0 +1,181 @@
+<?xml version = '1.0' encoding = 'UTF-8'?>
+<Table class="oracle.dbtools.crest.model.design.relational.Table" directorySegmentName="seg_0" id="959FA33D-CEFD-8B73-B40A-D71E77BE15F6" name="SCSDM_MATCH">
+<createdBy>kucza</createdBy>
+<createdTime>2020-10-10 09:17:41 UTC</createdTime>
+<comment><![CDATA[The table contains information about matches.]]></comment>
+<commentInRDBMS><![CDATA[The table contains information about matches.]]></commentInRDBMS>
+<ownerDesignName>SCSDM</ownerDesignName>
+<ordsAlias>table_7</ordsAlias>
+<allowColumnReorder>false</allowColumnReorder>
+<existDependencyGenerateInDDl>true</existDependencyGenerateInDDl>
+<parsed>true</parsed>
+<columns itemClass="oracle.dbtools.crest.model.design.relational.Column">
+<Column name="MATCH_RK" id="DF568EBE-2DAE-9F8A-63B8-5EA02A51FDE9">
+<createdBy>kucza</createdBy>
+<createdTime>2020-10-10 11:01:51 UTC</createdTime>
+<commentInRDBMS><![CDATA[The match retained key. Generated always as identity in the transformation layer.]]></commentInRDBMS>
+<ownerDesignName>SCSDM</ownerDesignName>
+<useDomainConstraints>false</useDomainConstraints>
+<use>1</use>
+<logicalDatatype>LOGDT011</logicalDatatype>
+<ownDataTypeParameters>,,</ownDataTypeParameters>
+<autoIncrementCycle>false</autoIncrementCycle>
+</Column>
+<Column name="LT_NAME" id="17487116-3503-4252-8615-536F0C2D8CAA">
+<createdBy>kucza</createdBy>
+<createdTime>2020-10-10 11:01:51 UTC</createdTime>
+<commentInRDBMS><![CDATA[The name of the left team.]]></commentInRDBMS>
+<ownerDesignName>SCSDM</ownerDesignName>
+<useDomainConstraints>false</useDomainConstraints>
+<use>1</use>
+<logicalDatatype>LOGDT024</logicalDatatype>
+<dataTypeSize>255 CHAR</dataTypeSize>
+<ownDataTypeParameters>255 CHAR,,</ownDataTypeParameters>
+<autoIncrementCycle>false</autoIncrementCycle>
+</Column>
+<Column name="RT_NAME" id="778FB1F5-0FF8-D3E3-BB4C-D6D8BD892E92">
+<createdBy>kucza</createdBy>
+<createdTime>2020-10-10 11:01:51 UTC</createdTime>
+<commentInRDBMS><![CDATA[The name of the right team.]]></commentInRDBMS>
+<ownerDesignName>SCSDM</ownerDesignName>
+<useDomainConstraints>false</useDomainConstraints>
+<use>1</use>
+<logicalDatatype>LOGDT024</logicalDatatype>
+<dataTypeSize>255 CHAR</dataTypeSize>
+<ownDataTypeParameters>255 CHAR,,</ownDataTypeParameters>
+<autoIncrementCycle>false</autoIncrementCycle>
+</Column>
+<Column name="LT_NATIONALITY" id="6960C2F9-9EE3-92E3-98B7-8AA4BB17B2D0">
+<createdBy>kucza</createdBy>
+<createdTime>2020-10-10 11:01:51 UTC</createdTime>
+<commentInRDBMS><![CDATA[The nationality of the left team.]]></commentInRDBMS>
+<ownerDesignName>SCSDM</ownerDesignName>
+<nullsAllowed>true</nullsAllowed>
+<useDomainConstraints>false</useDomainConstraints>
+<use>1</use>
+<logicalDatatype>LOGDT024</logicalDatatype>
+<dataTypeSize>255 CHAR</dataTypeSize>
+<ownDataTypeParameters>255 CHAR,,</ownDataTypeParameters>
+<autoIncrementCycle>false</autoIncrementCycle>
+</Column>
+<Column name="LT_RANKING" id="19ACD2BA-0E5D-7C11-CCBA-CAF7D98C4E71">
+<createdBy>kucza</createdBy>
+<createdTime>2020-10-10 11:01:51 UTC</createdTime>
+<commentInRDBMS><![CDATA[The place in the HLTV ranking of the left team at the time the match was played.]]></commentInRDBMS>
+<ownerDesignName>SCSDM</ownerDesignName>
+<nullsAllowed>true</nullsAllowed>
+<useDomainConstraints>false</useDomainConstraints>
+<use>1</use>
+<logicalDatatype>LOGDT011</logicalDatatype>
+<ownDataTypeParameters>,,</ownDataTypeParameters>
+<autoIncrementCycle>false</autoIncrementCycle>
+</Column>
+<Column name="RT_NATIONALITY" id="6BB37C5D-0C7E-1B17-BB09-A0FC2EDB4560">
+<createdBy>kucza</createdBy>
+<createdTime>2020-10-10 11:01:51 UTC</createdTime>
+<commentInRDBMS><![CDATA[The nationality of the right team.]]></commentInRDBMS>
+<ownerDesignName>SCSDM</ownerDesignName>
+<nullsAllowed>true</nullsAllowed>
+<useDomainConstraints>false</useDomainConstraints>
+<use>1</use>
+<logicalDatatype>LOGDT024</logicalDatatype>
+<dataTypeSize>255 CHAR</dataTypeSize>
+<ownDataTypeParameters>255 CHAR,,</ownDataTypeParameters>
+<autoIncrementCycle>false</autoIncrementCycle>
+</Column>
+<Column name="RT_RANKING" id="1571F6EA-ECDF-52C3-9227-3F5414E3D4B0">
+<createdBy>kucza</createdBy>
+<createdTime>2020-10-10 11:01:51 UTC</createdTime>
+<commentInRDBMS><![CDATA[The place in the HLTV ranking of the right team at the time the match was played.]]></commentInRDBMS>
+<ownerDesignName>SCSDM</ownerDesignName>
+<nullsAllowed>true</nullsAllowed>
+<useDomainConstraints>false</useDomainConstraints>
+<use>1</use>
+<logicalDatatype>LOGDT011</logicalDatatype>
+<ownDataTypeParameters>,,</ownDataTypeParameters>
+<autoIncrementCycle>false</autoIncrementCycle>
+</Column>
+<Column name="TORUNAMENT" id="E9B9BC9B-73CC-BDB9-0887-4F3B7D1D7487">
+<createdBy>kucza</createdBy>
+<createdTime>2020-10-10 11:01:51 UTC</createdTime>
+<commentInRDBMS><![CDATA[The torunament the match was played in.]]></commentInRDBMS>
+<ownerDesignName>SCSDM</ownerDesignName>
+<useDomainConstraints>false</useDomainConstraints>
+<use>1</use>
+<logicalDatatype>LOGDT024</logicalDatatype>
+<dataTypeSize>255 CHAR</dataTypeSize>
+<ownDataTypeParameters>255 CHAR,,</ownDataTypeParameters>
+<autoIncrementCycle>false</autoIncrementCycle>
+</Column>
+<Column name="MATCH_HOUR" id="3CDBCF78-ED73-B7C0-EF8A-BFDEC1FBD73F">
+<createdBy>kucza</createdBy>
+<createdTime>2020-10-10 11:01:51 UTC</createdTime>
+<commentInRDBMS><![CDATA[The hour the match was played at.]]></commentInRDBMS>
+<ownerDesignName>SCSDM</ownerDesignName>
+<useDomainConstraints>false</useDomainConstraints>
+<use>1</use>
+<logicalDatatype>LOGDT014</logicalDatatype>
+<ownDataTypeParameters>,,</ownDataTypeParameters>
+<autoIncrementCycle>false</autoIncrementCycle>
+</Column>
+<Column name="MATCH_DAY" id="5D6FFFF1-56B5-7700-04C5-C19006EA7B5F">
+<createdBy>kucza</createdBy>
+<createdTime>2020-10-10 11:01:51 UTC</createdTime>
+<commentInRDBMS><![CDATA[The day of the month the match was played.]]></commentInRDBMS>
+<ownerDesignName>SCSDM</ownerDesignName>
+<useDomainConstraints>false</useDomainConstraints>
+<use>1</use>
+<logicalDatatype>LOGDT011</logicalDatatype>
+<ownDataTypeParameters>,,</ownDataTypeParameters>
+<autoIncrementCycle>false</autoIncrementCycle>
+</Column>
+<Column name="MATCH_MONTH" id="78F2DE30-6364-52C2-6CF5-EEB9CE0829C2">
+<createdBy>kucza</createdBy>
+<createdTime>2020-10-10 11:01:51 UTC</createdTime>
+<commentInRDBMS><![CDATA[The month the match was played.]]></commentInRDBMS>
+<ownerDesignName>SCSDM</ownerDesignName>
+<useDomainConstraints>false</useDomainConstraints>
+<use>1</use>
+<logicalDatatype>LOGDT024</logicalDatatype>
+<dataTypeSize>255 CHAR</dataTypeSize>
+<ownDataTypeParameters>255 CHAR,,</ownDataTypeParameters>
+<autoIncrementCycle>false</autoIncrementCycle>
+</Column>
+<Column name="YEAR_OF_THE_MATCH" id="8B39D524-1C8D-67A0-604B-BA115DDEA109">
+<createdBy>kucza</createdBy>
+<createdTime>2020-10-10 11:01:51 UTC</createdTime>
+<commentInRDBMS><![CDATA[The year the match was played in.]]></commentInRDBMS>
+<ownerDesignName>SCSDM</ownerDesignName>
+<useDomainConstraints>false</useDomainConstraints>
+<use>1</use>
+<logicalDatatype>LOGDT011</logicalDatatype>
+<ownDataTypeParameters>,,</ownDataTypeParameters>
+<autoIncrementCycle>false</autoIncrementCycle>
+</Column>
+<Column name="INSERT_DTTM" id="7E59E3A3-6F32-18A9-2C57-4E59BACBD961">
+<createdBy>kucza</createdBy>
+<createdTime>2020-10-10 11:01:51 UTC</createdTime>
+<commentInRDBMS><![CDATA[Insert timestamp of the row.]]></commentInRDBMS>
+<ownerDesignName>SCSDM</ownerDesignName>
+<useDomainConstraints>false</useDomainConstraints>
+<use>1</use>
+<logicalDatatype>LOGDT047</logicalDatatype>
+<defaultValue>current_timestamp</defaultValue>
+<ownDataTypeParameters>,,</ownDataTypeParameters>
+<autoIncrementCycle>false</autoIncrementCycle>
+</Column>
+</columns>
+<indexes itemClass="oracle.dbtools.crest.model.design.relational.Index">
+<ind_PK_UK id="A1F764DD-65B0-DF48-DDF6-AB8E371B39FD" name="SCSDM_MATCH_PK">
+<createdBy>kucza</createdBy>
+<createdTime>2020-10-10 11:01:51 UTC</createdTime>
+<ownerDesignName>SCSDM</ownerDesignName>
+<pk>true</pk>
+<indexState>Primary Constraint</indexState>
+<isSurrogateKey>false</isSurrogateKey>
+<indexColumnUsage>
+<colUsage columnID="DF568EBE-2DAE-9F8A-63B8-5EA02A51FDE9"/>
+</indexColumnUsage>
+</ind_PK_UK>
+</indexes>
+</Table>

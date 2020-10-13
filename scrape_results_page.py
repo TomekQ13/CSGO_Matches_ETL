@@ -32,7 +32,7 @@ def scrape_results_page(my_url,
         if (details_url in matches_list):
             print('Match ' + str(details_url) + ' has already been inserted into the table')
             duplicates = duplicates + 1
-            print('duplicates: ' + str(duplicates))
+            print('Duplicates: ' + str(duplicates))
             continue
             
         if duplicates >= number_duplicates:

@@ -1,0 +1,86 @@
+<?xml version = '1.0' encoding = 'UTF-8'?>
+<Table class="oracle.dbtools.crest.model.design.relational.Table" directorySegmentName="seg_0" id="957527BC-45D5-B1CD-1043-3FF3112271ED" name="IF_TEAMS_PAST_MATCHES">
+<sourceDDLFile>Schema_DDL.sql</sourceDDLFile>
+<createdBy>kucza</createdBy>
+<createdTime>2020-10-10 08:25:56 UTC</createdTime>
+<ownerDesignName>SCSDM</ownerDesignName>
+<importedID>025ABDCA-29B2-C294-694C-A3052638AB1B</importedID>
+<allowColumnReorder>false</allowColumnReorder>
+<existDependencyGenerateInDDl>true</existDependencyGenerateInDDl>
+<parsed>true</parsed>
+<columns itemClass="oracle.dbtools.crest.model.design.relational.Column">
+<Column name="MATCH_URL" id="398FC88E-9A6E-45A5-86E4-EE29A9205370">
+<sourceDDLFile>Schema_DDL.sql</sourceDDLFile>
+<createdBy>kucza</createdBy>
+<createdTime>2020-10-10 08:25:56 UTC</createdTime>
+<ownerDesignName>SCSDM</ownerDesignName>
+<importedID>695F9D96-C180-A289-726B-C63FD9DDCF58</importedID>
+<use>0</use>
+<logicalDatatype>LOGDT024</logicalDatatype>
+<domain>43AEB319-FE66-1CE3-2328-C18BCAE02398</domain>
+<ownDataTypeParameters>,,</ownDataTypeParameters>
+<autoIncrementCycle>false</autoIncrementCycle>
+</Column>
+<Column name="TEAM" id="739DDB65-6AE0-7854-0C7E-2FC4B1E2C677">
+<sourceDDLFile>Schema_DDL.sql</sourceDDLFile>
+<createdBy>kucza</createdBy>
+<createdTime>2020-10-10 08:25:56 UTC</createdTime>
+<ownerDesignName>SCSDM</ownerDesignName>
+<importedID>2F559AD2-FAB9-1842-ECDD-260CB4B6C479</importedID>
+<use>0</use>
+<logicalDatatype>LOGDT024</logicalDatatype>
+<domain>E74D611B-FCBD-3FAC-6A64-7614BEA84E07</domain>
+<ownDataTypeParameters>,,</ownDataTypeParameters>
+<autoIncrementCycle>false</autoIncrementCycle>
+</Column>
+<Column name="TYPE" id="CB4A88B5-7DA9-7C60-D294-E6FB444AFFFE">
+<sourceDDLFile>Schema_DDL.sql</sourceDDLFile>
+<createdBy>kucza</createdBy>
+<createdTime>2020-10-10 08:25:56 UTC</createdTime>
+<ownerDesignName>SCSDM</ownerDesignName>
+<importedID>EC5C1329-E5A3-D75B-C11B-9A688808FCF1</importedID>
+<use>0</use>
+<logicalDatatype>LOGDT024</logicalDatatype>
+<domain>E74D611B-FCBD-3FAC-6A64-7614BEA84E07</domain>
+<ownDataTypeParameters>,,</ownDataTypeParameters>
+<autoIncrementCycle>false</autoIncrementCycle>
+</Column>
+<Column name="OPPONENT" id="E2C0D88D-62E2-CE49-2B53-3CC3E60A0ECE">
+<sourceDDLFile>Schema_DDL.sql</sourceDDLFile>
+<createdBy>kucza</createdBy>
+<createdTime>2020-10-10 08:25:56 UTC</createdTime>
+<ownerDesignName>SCSDM</ownerDesignName>
+<importedID>5CF88FA3-57E5-AC2C-6EDC-1F8E8643A9B2</importedID>
+<use>0</use>
+<logicalDatatype>LOGDT024</logicalDatatype>
+<domain>E74D611B-FCBD-3FAC-6A64-7614BEA84E07</domain>
+<ownDataTypeParameters>,,</ownDataTypeParameters>
+<autoIncrementCycle>false</autoIncrementCycle>
+</Column>
+<Column name="RESULT" id="3D41B718-E889-46B3-F401-A30FDEF72E41">
+<sourceDDLFile>Schema_DDL.sql</sourceDDLFile>
+<createdBy>kucza</createdBy>
+<createdTime>2020-10-10 08:25:56 UTC</createdTime>
+<ownerDesignName>SCSDM</ownerDesignName>
+<importedID>F85CE873-CF82-93E1-2F8E-01901CE42208</importedID>
+<use>0</use>
+<logicalDatatype>LOGDT024</logicalDatatype>
+<domain>E74D611B-FCBD-3FAC-6A64-7614BEA84E07</domain>
+<ownDataTypeParameters>,,</ownDataTypeParameters>
+<autoIncrementCycle>false</autoIncrementCycle>
+</Column>
+<Column name="T_INSERT_DTTM" id="444DEF95-3045-8153-E10C-3725F566A559">
+<sourceDDLFile>Schema_DDL.sql</sourceDDLFile>
+<createdBy>kucza</createdBy>
+<createdTime>2020-10-10 08:25:56 UTC</createdTime>
+<ownerDesignName>SCSDM</ownerDesignName>
+<importedID>BF999C0A-F862-1BEA-5D36-6E7E98FECF1C</importedID>
+<use>0</use>
+<logicalDatatype>LOGDT047</logicalDatatype>
+<domain>01DA9667-3085-D54D-B040-B25BF2049A8B</domain>
+<defaultValue>current_timestamp</defaultValue>
+<ownDataTypeParameters>,,</ownDataTypeParameters>
+<autoIncrementCycle>false</autoIncrementCycle>
+</Column>
+</columns>
+</Table>

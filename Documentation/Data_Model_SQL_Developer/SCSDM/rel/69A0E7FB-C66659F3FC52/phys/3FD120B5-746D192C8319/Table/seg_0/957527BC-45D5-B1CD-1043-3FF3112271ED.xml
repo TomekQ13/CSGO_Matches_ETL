@@ -1,0 +1,46 @@
+<?xml version = '1.0' encoding = 'UTF-8'?>
+<TableProxyOraclev12c class="oracle.dbtools.crest.model.design.storage.oracle.v12c.TableProxyOraclev12c" name="IF_TEAMS_PAST_MATCHES" directorySegmentName="seg_0" id="957527BC-45D5-B1CD-1043-3FF3112271ED">
+<createdBy>kucza</createdBy>
+<createdTime>2020-10-10 08:25:56 UTC</createdTime>
+<ownerDesignName>SCSDM</ownerDesignName>
+<logging>YES</logging>
+<partitionedRowMovement>DISABLE</partitionedRowMovement>
+<segment>0AB6996B-CED8-1DAC-85A7-B6103ECB5F89</segment>
+<tableSpace>FB90E6F5-901D-B69E-06B1-1E6424C269CB</tableSpace>
+<temporaryChanged>false</temporaryChanged>
+<accessDriverType>oracle_loader</accessDriverType>
+<rejectLimit></rejectLimit>
+<columnProxies itemClass="oracle.dbtools.crest.model.design.storage.oracle.v12c.ColumnProxyOraclev12c">
+<ColumnProxy name="MATCH_URL" id="398FC88E-9A6E-45A5-86E4-EE29A9205370">
+<createdBy>kucza</createdBy>
+<createdTime>2020-10-10 08:25:56 UTC</createdTime>
+<ownerDesignName>SCSDM</ownerDesignName>
+</ColumnProxy>
+<ColumnProxy name="RESULT" id="3D41B718-E889-46B3-F401-A30FDEF72E41">
+<createdBy>kucza</createdBy>
+<createdTime>2020-10-10 08:25:56 UTC</createdTime>
+<ownerDesignName>SCSDM</ownerDesignName>
+</ColumnProxy>
+<ColumnProxy name="T_INSERT_DTTM" id="444DEF95-3045-8153-E10C-3725F566A559">
+<createdBy>kucza</createdBy>
+<createdTime>2020-10-10 08:25:56 UTC</createdTime>
+<ownerDesignName>SCSDM</ownerDesignName>
+<defaultValue>current_timestamp</defaultValue>
+</ColumnProxy>
+<ColumnProxy name="TEAM" id="739DDB65-6AE0-7854-0C7E-2FC4B1E2C677">
+<createdBy>kucza</createdBy>
+<createdTime>2020-10-10 08:25:56 UTC</createdTime>
+<ownerDesignName>SCSDM</ownerDesignName>
+</ColumnProxy>
+<ColumnProxy name="TYPE" id="CB4A88B5-7DA9-7C60-D294-E6FB444AFFFE">
+<createdBy>kucza</createdBy>
+<createdTime>2020-10-10 08:25:56 UTC</createdTime>
+<ownerDesignName>SCSDM</ownerDesignName>
+</ColumnProxy>
+<ColumnProxy name="OPPONENT" id="E2C0D88D-62E2-CE49-2B53-3CC3E60A0ECE">
+<createdBy>kucza</createdBy>
+<createdTime>2020-10-10 08:25:56 UTC</createdTime>
+<ownerDesignName>SCSDM</ownerDesignName>
+</ColumnProxy>
+</columnProxies>
+</TableProxyOraclev12c>
