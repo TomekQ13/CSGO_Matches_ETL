@@ -1,7 +1,7 @@
 <?xml version = '1.0' encoding = 'UTF-8'?>
-<FKIndexAssociation class="oracle.dbtools.crest.model.design.relational.FKIndexAssociation" directorySegmentName="seg_0" id="C28FD319-1A41-285B-519E-31807550B31E" containerWithKeyObject="540D0631-C13D-7D7B-F46E-9F9AB74BA67C" localFKIndex="A0356E1E-DA3B-01D2-9BC0-6C4099CF5DCC" name="SCSDM_LINEUP_SCSDM_MATCH_FK">
+<FKIndexAssociation class="oracle.dbtools.crest.model.design.relational.FKIndexAssociation" directorySegmentName="seg_0" id="3C8D967C-B339-4ABF-585E-1B222117006B" containerWithKeyObject="67A6A98C-C9ED-A188-92FC-0E97A7962DBE" localFKIndex="8C74C4C8-8E69-1F58-5323-75A6F5EF8445" name="SCSDM_MAP_SCSDM_MATCH_FK">
 <createdBy>kucza</createdBy>
-<createdTime>2020-10-10 11:02:58 UTC</createdTime>
+<createdTime>2020-10-17 21:00:25 UTC</createdTime>
 <ownerDesignName>SCSDM</ownerDesignName>
 <referredTableLongName>SCSDM_MATCH</referredTableLongName>
 <deleteRule>NO ACTION</deleteRule>
@@ -13,4 +13,7 @@
 <transferable>true</transferable>
 <rely>false</rely>
 <columnDependencyConstraintGenerateInDDL>true</columnDependencyConstraintGenerateInDDL>
+<propertyMap>
+<property name="createdByFKDiscoverer" value="true"/>
+</propertyMap>
 </FKIndexAssociation>

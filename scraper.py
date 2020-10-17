@@ -77,12 +77,12 @@ def scrape_match_details(details_url):
         try:
             results_dict["team_left_score"] = cs_map[1].findAll("div", {"class": "results-team-score"})[0].text
         except:
-            results_dict["team_left_score"] = 'TBA'
+            results_dict["team_left_score"] = 'ERRRO_TBA'
             
         try:
             results_dict["team_right_score"] = cs_map[1].findAll("div", {"class": "results-team-score"})[1].text
         except:
-            results_dict["team_right_score"] = 'TBA'            
+            results_dict["team_right_score"] = 'ERROR_TBA'            
             
         results_dict["map_number"] = map_number
         results_dict["match_url"] = details_url
@@ -111,16 +111,20 @@ def scrape_match_details(details_url):
                 
                 try:
                     player_name = players[i].text[2:-2]
+                    if len(player_name) == 0:
+                        player_name = 'ERROR_PLAYER_NO_NAME'
                     lineups_dict["team_left_player_"+str(i)] = player_name
                 except IndexError:
-                    lineups_dict["team_left_player_"+str(i)] = 'PLAYER_NOT_FOUND'
+                    lineups_dict["team_left_player_"+str(i)] = 'ERROR_PLAYER_NOT_FOUND'
                     print("team_left_player_"+str(i) + ' has not been found')
             else:
                 try:
                     player_name = players[i].text[2:-2]
+                    if len(player_name) == 0:
+                        player_name = 'ERROR_PLAYER_NO_NAME'
                     lineups_dict["team_right_player_"+str(i)] = player_name
                 except IndexError:
-                    lineups_dict["team_right_player_"+str(i)] = 'PLAYER_NOT_FOUND'
+                    lineups_dict["team_right_player_"+str(i)] = 'ERROR_PLAYER_NOT_FOUND'
                     print("team_right_player_"+str(i) + ' has not been found')
                  
      #if there are 4 players add TBA as fifth player to avoid length mismatch
