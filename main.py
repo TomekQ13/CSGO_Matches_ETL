@@ -7,7 +7,7 @@ def main():
     
     number_of_pages_to_scrape = 1000
     logging_offset = True
-    starting_offset = 42900
+    starting_offset = 45900
     query = 'SELECT MATCH_URL FROM C##TKUCZAK.IF_FINAL_DICTIONARY'
     
     
@@ -46,6 +46,10 @@ def main():
     except Exception as e:
         print('Exception: ' + str(e) + ' caught')
         #loop()
+        
+    print('Scraping finished')
 
 if __name__ == '__main__':
     main()
+
+    

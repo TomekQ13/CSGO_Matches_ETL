@@ -1,7 +1,7 @@
-def query_to_list(engine, query):
+def query_to_list(engine, query, param_dict):
     #transfers query results to a list
     try:
-        results = engine.execute(query)
+        results = engine.execute(query, param_dict)
     except:
         raise #BaseException("Query could not be executed or was executed with errors")
         
