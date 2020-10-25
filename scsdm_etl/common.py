@@ -1,4 +1,4 @@
-def query_to_list(engine, query, param_dict):
+def query_to_list(engine, query, param_dict = {}):
     #transfers query results to a list
     try:
         results = engine.execute(query, param_dict)

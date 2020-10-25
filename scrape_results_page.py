@@ -3,13 +3,15 @@ def scrape_results_page(my_url,
                         logging = True,
                         matches_list = [],
                         number_duplicates = 5,
-                        logging_matches =  True):
+                        logging_matches =  True,
+                        matches_to_skip = None):
     # scrapes one page of results - around 100 matches and inserts into the database
 
     import scraper
     #import db_connect
     import preprocessing_functions as pf
     import pandas as pd
+    
     
     #my_url = 'https://www.hltv.org/results'
     
@@ -26,6 +28,10 @@ def scrape_results_page(my_url,
             
         #get the match details url
         details_url = 'https://www.hltv.org' + match[1].a['href']
+        
+        if details_url in matches_to_skip:
+            print('Skipping match: ' + details_url)
+            continue
         
         #loading only 
         #if match_url is already in the table display a message to the log and skip the load

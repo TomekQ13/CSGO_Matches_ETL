@@ -62,3 +62,7 @@ results = db_connection.execute(query_columns)
 query_columns = "select column_name from sys.all_tab_columns where owner = 'C##TKUCZAK' and table_name = 'IF_FINAL_DICTIONARY' and column_name not like 'T_%'"
 columns_list = scsdm_etl.common.query_to_list(db_connection, query_columns)
 column_str = ', '.join(columns_list)
+
+url = 'https://www.hltv.org/matches/2292957/alsen-vs-eplay-esl-pro-series-poland-season-9'
+
+final_dict, results_pdf, teams_past_matches, h2h_table = scraper.scrape_match_details(url)

@@ -1,7 +1,4 @@
 --------------------------------------------------------
---  File created - niedziela-paüdziernika-18-2020   
---------------------------------------------------------
---------------------------------------------------------
 --  DDL for Table TR_HEAD_TO_HEAD
 --------------------------------------------------------
 
@@ -21,7 +18,7 @@
  NOCOMPRESS LOGGING
   TABLESPACE "USERS" ;
 
-   COMMENT ON COLUMN "C##TKUCZAK"."TR_HEAD_TO_HEAD"."HEAD_TO_HEAD_RK" IS 'Retained key for the table.';
+   COMMENT ON COLUMN "C##TKUCZAK"."TR_HEAD_TO_HEAD"."HEAD_TO_HEAD_RK" IS 'Retained key for the table. Generated always as identity in the transformation layer.';
    COMMENT ON COLUMN "C##TKUCZAK"."TR_HEAD_TO_HEAD"."INSERT_DTTM" IS 'Row insert timestamp.';
    COMMENT ON COLUMN "C##TKUCZAK"."TR_HEAD_TO_HEAD"."MATCH_RK" IS 'Retained key for the match the  head to head belongs to. Generated in the transformation layer.';
    COMMENT ON COLUMN "C##TKUCZAK"."TR_HEAD_TO_HEAD"."LT_NAME" IS 'The name of the left team.';
@@ -55,7 +52,7 @@
  NOCOMPRESS LOGGING
   TABLESPACE "USERS" ;
 
-   COMMENT ON COLUMN "C##TKUCZAK"."TR_LINEUP"."LINEUP_RK" IS 'The retained key for the lineup.';
+   COMMENT ON COLUMN "C##TKUCZAK"."TR_LINEUP"."LINEUP_RK" IS 'The retained key for the lineup. Generated always as identity in the transformation layer.';
    COMMENT ON COLUMN "C##TKUCZAK"."TR_LINEUP"."INSERT_DTTM" IS 'Insert timestamp of the row.';
    COMMENT ON COLUMN "C##TKUCZAK"."TR_LINEUP"."MATCH_RK" IS 'Retained key for a match the lineup belogs to.';
    COMMENT ON COLUMN "C##TKUCZAK"."TR_LINEUP"."LT_PLAYER_ONE" IS 'Left team player one.';
@@ -115,7 +112,7 @@
  NOCOMPRESS LOGGING
   TABLESPACE "USERS" ;
 
-   COMMENT ON COLUMN "C##TKUCZAK"."TR_MATCH"."MATCH_RK" IS 'The match retained key.';
+   COMMENT ON COLUMN "C##TKUCZAK"."TR_MATCH"."MATCH_RK" IS 'The match retained key. Generated always as identity in the transformation layer.';
    COMMENT ON COLUMN "C##TKUCZAK"."TR_MATCH"."LT_NAME" IS 'The name of the left team.';
    COMMENT ON COLUMN "C##TKUCZAK"."TR_MATCH"."RT_NAME" IS 'The name of the right team.';
    COMMENT ON COLUMN "C##TKUCZAK"."TR_MATCH"."LT_NATIONALITY" IS 'The nationality of the left team.';
