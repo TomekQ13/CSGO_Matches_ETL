@@ -77,7 +77,7 @@ def scrape_match_details(details_url):
         try:
             results_dict["team_left_score"] = cs_map[1].findAll("div", {"class": "results-team-score"})[0].text
         except:
-            results_dict["team_left_score"] = 'ERRRO_TBA'
+            results_dict["team_left_score"] = 'ERROR_TBA'
             
         try:
             results_dict["team_right_score"] = cs_map[1].findAll("div", {"class": "results-team-score"})[1].text
