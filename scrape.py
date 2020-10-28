@@ -9,7 +9,7 @@ def main():
     
     number_of_pages_to_scrape = 1000
     logging_offset = True
-    starting_offset = 51500
+    starting_offset = 0
     query = 'SELECT MATCH_URL FROM C##TKUCZAK.IF_FINAL_DICTIONARY'
     
     

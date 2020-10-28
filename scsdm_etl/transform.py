@@ -41,7 +41,7 @@ class transform(extract_load):
         import sqlalchemy as sql
         from datetime import datetime
         
-                #if run_id not assigned as an argument then assign the current run_id
+        #if run_id not assigned as an argument then assign the current run_id
         if not run_id:
             run_id = self.run_id
         
@@ -103,7 +103,7 @@ from C##TKUCZAK.EX_FINAL_DICTIONARY t1
 left join C##TKUCZAK.TR_MAP_MATCH_RK t2 
 on t1.MATCH_URL = t2.MATCH_URL'''
 
-transform_inst = transform()
+transform_inst = transform(echo = False)
 transform_inst.open_run_id(etl_code = 'TRANSFORM', comments = 'Testing head to head transform')
 transform_inst.transform_insert(source_table = 'EX_HEAD_TO_HEAD', target_table = 'TR_HEAD_TO_HEAD', initial_load = True, transform_query = head_to_head_query)
 transform_inst.transform_insert(source_table = 'EX_FINAL_DICTIONARY', target_table = 'TR_LINEUP ', initial_load = True, transform_query = lineup_query)

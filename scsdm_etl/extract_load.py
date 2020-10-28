@@ -98,3 +98,52 @@ class extract_load:
         print('Inserted: ' + str(res.rowcount) + ' rows')
 
 
+    def insert(self, source_table, target_table, exists_column = 'MATCH_URL', source_schema = 'C##TKUCZAK', target_schema = 'C##TKUCZAK', initial_load = False):
+               
+        import sqlalchemy as sql
+        from scsdm_etl.common import columns_to_string
+        
+        #check if run_id is open
+        if self.etl_code == '-1' and self.run_id == -1:
+            raise Exception('Open run_id first.')
+            
+        #PART 1. delete rows with the current run_id from the target table       
+        if initial_load:
+            delete_query = sql.text('delete from ' + target_schema + '.' + target_table)
+        else:
+            delete_query = sql.text('delete from ' + target_schema + '.' + target_table + ' where T_INSERT_RUN_ID = ' + str(self.run_id))
+            
+        delete = self.engine.execute(delete_query)
+        
+        print(str(delete.rowcount) + ' rows deleted.')
+        
+        #PART 2 - INSERT
+        #select all columns
+        columns = columns_to_string(engine = self.engine, schema = target_schema, table = target_table, include_technical = False)
+        
+        #create the insert query        
+        #add where clause if delta load
+        if not initial_load:
+            insert_query = 'insert into ' + target_schema + '.' + target_table + ' (' + columns + ', T_INSERT_RUN_ID) ' + 'select ' + columns + ', ' +  str(self.run_id) + ' as "T_INSERT_RUN_ID" from ' + source_schema + '.' + source_table + ' where T_INSERT_RUN_ID = ' + str(self.run_id)
+        else:
+            insert_query = 'insert into ' + target_schema + '.' + target_table + ' (' + columns + ', T_INSERT_RUN_ID) ' + 'select ' + columns + ', ' +  str(self.run_id) + ' as "T_INSERT_RUN_ID" from ' + source_schema + '.' + source_table
+        insert = self.engine.execute(sql.text(insert_query))
+        
+        print('Inserted ' + str(insert.rowcount) + ' rows.')
+        
+    def close_run_id(self, etl_code = None):
+        
+        if not etl_code == None:
+            self.parameters['etl_code'] = etl_code
+        
+        import sqlalchemy as sql
+        
+        query_update = sql.text("update " + self.load_status_table + " set close_dttm = current_timestamp where ETL_CODE = :etl_code and close_dttm is null")
+        
+        update_execute = self.engine.execute(query_update, self.parameters)
+        
+        if update_execute.rowcount == 0:
+            raise Exception('No open run id. Open run id first.')
+        
+
+               

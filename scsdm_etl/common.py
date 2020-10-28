@@ -26,4 +26,15 @@ def truncate_interface(engine,
                           
                           
                           
+def columns_to_string(schema, table, engine, include_technical = False, param_dict = {}):
+    from scsdm_etl.common import query_to_list
     
+    query_columns = "select column_name from sys.all_tab_columns where owner = '" + schema + "' and table_name = '" + table + "'"
+    
+    if not include_technical:
+        query_columns = query_columns + " and column_name not like 'T_INSERT%'"
+        
+    columns_list = query_to_list(engine, query_columns, param_dict)
+    column_str = ', '.join(columns_list)
+    
+    return column_str
