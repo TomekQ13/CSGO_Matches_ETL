@@ -62,7 +62,7 @@ def query_to_list(engine, query):
     try:
         results = engine.execute(query)
     except Exception:
-        raise #BaseException("Query could not be executed or was executed with errors")
+        raise
         
     results_list = [row[0] for row in results]
         

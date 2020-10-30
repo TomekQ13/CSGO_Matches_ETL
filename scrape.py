@@ -1,15 +1,14 @@
-
-
-def main():
-    import scrape_results_page as srp
+def scrape():
+    import WebScraping.scrape_results_page as srp
     import sqlalchemy
-    import preprocessing_functions as pf
+    import WebScraping.preprocessing_functions as pf
     import urllib.error
     import time
     
-    number_of_pages_to_scrape = 1000
+    number_of_pages_to_scrape = 100000
     logging_offset = True
     starting_offset = 0
+    duplicates = 25
     query = 'SELECT MATCH_URL FROM C##TKUCZAK.IF_FINAL_DICTIONARY'
     
     
@@ -45,7 +44,7 @@ def main():
                                         db_connection,
                                         logging = True,
                                         matches_list = results_list,
-                                        number_duplicates = 9999999,
+                                        number_duplicates = duplicates,
                                         matches_to_skip = matches_to_skip)
             except Exception:
                 raise
@@ -58,7 +57,7 @@ def main():
     except urllib.error.HTTPError as e:
         print('Exception: ' + str(e) + ' caught. Waiting 60 seconds and restarting the scraping.')
         time.sleep(60)
-        
+
         #select the already scraped results once again to avoid scraping duplicates
         results_list = pf.query_to_list(db_connection, query) 
         
@@ -66,10 +65,13 @@ def main():
             loop(matches_to_skip = matches_to_skip)
         except urllib.error.HTTPError as e:
             print('Exception: ' + str(e) + ' caught again.')
+        except ValueError as e:
+            raise e
+        
 
         
     print('Scraping finished')
 
 if __name__ == '__main__':
-    main()
+    scrape()
 

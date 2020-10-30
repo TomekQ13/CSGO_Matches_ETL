@@ -7,9 +7,9 @@ def scrape_results_page(my_url,
                         matches_to_skip = None):
     # scrapes one page of results - around 100 matches and inserts into the database
 
-    import scraper
+    import WebScraping.scraper as scraper
     #import db_connect
-    import preprocessing_functions as pf
+    import WebScraping.preprocessing_functions as pf
     import pandas as pd
     
     
@@ -39,11 +39,13 @@ def scrape_results_page(my_url,
             print('Match ' + str(details_url) + ' has already been inserted into the table')
             duplicates = duplicates + 1
             print('Duplicates: ' + str(duplicates))
-            continue
+            
             
         if duplicates >= number_duplicates:
-            raise BaseException('The maximum number of duplicates reached. The scraping will stop now.')
+            raise ValueError('The maximum number of duplicates reached. The scraping will stop now.')
             
+            #continue if number of max duplicates not reached
+            continue
         
         #scrape the match
         try:

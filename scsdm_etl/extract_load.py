@@ -3,14 +3,20 @@ class extract_load:
     def __init__(self,
                  load_status_table = "C##TKUCZAK.LOAD_STATUS",
                  connect_string = 'oracle+cx_oracle://C##TKUCZAK:TOMCIO@@@@localhost:1521',
-                 echo = True):
+                 echo = True,
+                 run_id = None):
         #estabilish the database connection
         import sqlalchemy as sql
              
         self.connect_string = connect_string
         self.engine = sql.create_engine(connect_string, echo = echo)
         self.etl_code = '-1'
-        self.run_id = -1
+        
+        if not run_id:
+            self.run_id = -1
+        else:
+            self.run_id = run_id
+            
         self.load_status_table = load_status_table
         
         #create a dictionary with parameters to use as bind variables
@@ -37,16 +43,13 @@ class extract_load:
         
         #if run_id is open close the open one and open a new one with the etl_code                
         try:
-#            if self.run_id != -1 and self.etl_code != '-1':
+
                 #close the open one                
             self.engine.execute(query_update, self.parameters)
                 
                 #open a new one                                
             self.engine.execute(query_open_run_id, self.parameters)
                 
-#            else:
-#                #only open a new one
-#                self.engine.execute(query_open_run_id, self.parameters)
                 
         #if not possible then raise Exception and show message
         except Exception as e:
@@ -138,7 +141,11 @@ class extract_load:
         
         import sqlalchemy as sql
         
-        query_update = sql.text("update " + self.load_status_table + " set close_dttm = current_timestamp where ETL_CODE = :etl_code and close_dttm is null")
+        
+        if not etl_code == None:
+            query_update = sql.text("update " + self.load_status_table + " set close_dttm = current_timestamp where ETL_CODE = :etl_code and close_dttm is null")
+        else:
+            query_update = sql.text("update " + self.load_status_table + " set close_dttm = current_timestamp where close_dttm is null")
         
         update_execute = self.engine.execute(query_update, self.parameters)
         

@@ -3,7 +3,7 @@
 def scrape_match_details(details_url):
     
     import pandas as pd    
-    import preprocessing_functions as pf
+    import WebScraping.preprocessing_functions as pf
         
     details_page_soup = pf.open_url(details_url)
     
