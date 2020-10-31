@@ -5,7 +5,7 @@ def main():
     try:
         scrape()
     except ValueError as e:
-        raise e
+        print(e)
     finally:
         do_etl(inital_load = False)
 
